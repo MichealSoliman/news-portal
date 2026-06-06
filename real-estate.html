@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>بوابة المشاريع السعودية | عقارات</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Cairo', sans-serif; }
+        .bg-primary { background-color: #0B3B66; }
+        .text-primary { color: #0B3B66; }
+        .bg-accent { background-color: #E53E3E; }
+        .border-accent { border-color: #E53E3E; }
+        .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .ad-placeholder { background: linear-gradient(135deg, #f8f9fc 0%, #eef2f6 100%); }
+        .news-card {
+            transition: all 0.2s ease;
+        }
+        .news-card:hover {
+            transform: translateX(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        .mobile-nav-open {
+            max-height: 500px;
+            opacity: 1;
+            visibility: visible;
+        }
+        .mobile-nav-closed {
+            max-height: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+        body.no-scroll {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<div class="sticky top-0 z-50">
+        <!-- Header -->
+    <header class="bg-white border-b shadow-md sticky top-0 z-50 transition-colors duration-300">
+        <div class="container mx-auto px-4">
+            <!-- Top Bar -->
+            <div class="flex justify-between items-center py-2 text-sm text-gray-600 border-b">
+                <div id="current-date" class="font-medium"></div>
+                <div class="flex items-center gap-5">
+                    <a href="#" class="hover:text-primary transition">الرئيسية</a>
+                    <a href="#" class="hover:text-primary transition">سياسة الخصوصية</a>
+                    <a href="#" class="hover:text-primary transition">اتصل بنا</a>
+                    <button id="dark-mode-btn" class="w-7 h-7 rounded-full bg-gray-100 hover:bg-gray-200 transition flex items-center justify-center">
+                        <i class="fas fa-moon text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Main Header -->
+            <div class="flex justify-between items-center py-5">
+                <div class="flex gap-3">
+                    <a href="#" class="w-9 h-9 bg-red-600 text-white rounded-full flex items-center justify-center hover:scale-110 transition transform"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="w-9 h-9 bg-gradient-to-tr from-pink-500 to-orange-500 text-white rounded-full flex items-center justify-center hover:scale-110 transition transform"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-9 h-9 bg-sky-500 text-white rounded-full flex items-center justify-center hover:scale-110 transition transform"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="w-9 h-9 bg-blue-700 text-white rounded-full flex items-center justify-center hover:scale-110 transition transform"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                <div class="text-center">
+                    <h1 class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">
+                        البوابة الإخبارية السعودية
+                    </h1>
+                    <p class="text-sm text-gray-500 mt-1 font-medium">
+                        أخبار السعودية والخليج والعالم لحظة بلحظة
+                    </p>
+                </div>
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="بحث..." class="border rounded-full py-2 px-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-primary w-64">
+                    <i class="fas fa-search absolute right-3 top-3 text-gray-400"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar - Desktop -->
+    <nav class="bg-primary  text-white  top-[140px] md:top-[150px] z-40 shadow-lg hidden md:block">
+        <div class="container mx-auto px-4">
+            <ul class="flex justify-center space-x-reverse space-x-8 py-3 text-sm font-semibold">
+                <li><a href="index.html" class=" hover:text-amber-200  transition">الرئيسية</a></li>
+                <li><a href="breaking-news.html" class="hover:text-amber-200 transition">أخبار عاجلة</a></li>
+                <li><a href="daily-news.html" class="hover:text-amber-200 transition">أخبار اليوم</a></li>
+                <li><a href="real-estate.html" class="text-amber-200 border-b-2 border-amber-300 pb-1 transition">عقارات</a></li>
+                <li><a href="construction.html" class="hover:text-amber-200 transition">مقاولات</a></li>
+                <li><a href="security-systems.html" class="hover:text-amber-200 transition">أمن وسلامة</a></li>
+                <li><a href="interior-design.html" class="hover:text-amber-200 transition">تشطيبات</a></li>
+                <li><a href="sports.html" class="hover:text-amber-200 transition">رياضة</a></li>
+                <li><a href="reports.html" class="hover:text-amber-200 transition">تقارير</a></li>
+                <li><a href="about.html" class="hover:text-amber-200 transition">من نحن</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Button & Menu -->
+    <div class="md:hidden  top-[200px] md:top-[150px] z-40 bg-primary p-3 flex justify-between items-center">
+        <button id="mobile-menu-toggle" class="text-white text-2xl">
+            <i class="fas fa-bars"></i>
+        </button>
+        <span class="text-white text-sm font-bold">القائمة</span>
+    </div>
+    <div id="mobile-nav-menu" class="md:hidden bg-primary  top-[300px] shadow-xl transition-all duration-300 ease-in-out overflow-hidden z-50 mobile-nav-closed">
+        <ul class="flex flex-col py-3 text-sm font-semibold">
+            <li><a href="index.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🏠 الرئيسية</a></li>
+            <li><a href="breaking-news.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">⚡ أخبار عاجلة</a></li>
+            <li><a href="daily-news.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">📰 أخبار اليوم</a></li>
+            <li><a href="real-estate.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🏢 عقارات</a></li>
+            <li><a href="construction.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🏗️ مقاولات</a></li>
+            <li><a href="security-systems.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🛡️ أمن وسلامة</a></li>
+            <li><a href="interior-design.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🎨 تشطيبات</a></li>
+            <li><a href="sports.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">⚽ رياضة</a></li>
+            <li><a href="reports.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">📊 تقارير</a></li>
+            <li><a href="about.html" class="block px-6 py-3 hover:bg-primary/80 text-white">👥 من نحن</a></li>
+        </ul>
+    </div>
+</div>
+
+    <main class="container mx-auto px-4 py-6">
+        <!-- Breadcrumb -->
+        <nav class="flex mb-5 text-gray-500 text-sm">
+            <ol class="inline-flex items-center space-x-reverse space-x-2">
+                <li><a href="index.html" class="hover:text-primary">الرئيسية</a></li>
+                <li><i class="fas fa-chevron-left text-xs mx-2"></i><span class="text-primary font-bold">عقارات</span></li>
+            </ol>
+        </nav>
+
+        <div class="border-b border-gray-200 pb-3 mb-6">
+            <h1 class="text-2xl md:text-3xl font-bold text-primary border-r-4 border-accent pr-4 inline-block">عقارات</h1>
+            <span id="total-badge" class="mr-4 text-sm bg-gray-100 text-primary px-3 py-1 rounded-full">آخر أخبار العقارات</span>
+        </div>
+
+        <!-- تقسيم الصفحة: يمين (الكروت العمودية) + يسار (إعلانات وأكثر قراءة) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- العمود الرئيسي (يمين) - قائمة الكروت -->
+            <div class="lg:col-span-8">
+                <div id="news-list-container" class="space-y-4">
+                    <!-- سيتم تعبئة الكروت من JS -->
+                </div>
+                
+                <!-- Pagination -->
+                <div class="mt-10 flex justify-center">
+                    <nav id="pagination-nav" class="inline-flex space-x-reverse space-x-2 rounded-md shadow-sm bg-white p-2 border" aria-label="Pagination"></nav>
+                </div>
+                <div class="text-center text-gray-400 text-xs mt-3">🔢 اضغط على الأرقام لتصفح المزيد من أخبار العقارات (8 أخبار لكل صفحة)</div>
+            </div>
+            
+            <!-- العمود الأيسر (إعلانات + الأكثر قراءة) -->
+            <div class="lg:col-span-4 space-y-6">
+                <!-- مساحة إعلانية 1 -->
+                <div class="ad-placeholder rounded-xl p-5 text-center border border-gray-200 shadow-sm">
+                    <i class="fas fa-ad text-3xl text-gray-400 mb-2 block"></i>
+                    <span class="text-xs text-gray-500 uppercase tracking-wider">مساحة إعلانية</span>
+                    <div class="mt-3 h-32 bg-white/60 rounded-lg flex items-center justify-center text-gray-400 text-sm border border-dashed">عقارات - إعلانك هنا</div>
+                </div>
+                
+                <!-- أكثر المقالات قراءة -->
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-5 sticky top-28">
+                    <div class="flex items-center gap-2 border-b border-gray-200 pb-3 mb-4">
+                        <i class="fas fa-fire-flame text-accent text-xl"></i>
+                        <h3 class="font-bold text-lg text-gray-800">الأكثر قراءة في العقارات</h3>
+                    </div>
+                    <div id="most-read-list" class="space-y-4"></div>
+                </div>
+                
+                <!-- مساحة إعلانية 2 -->
+                <div class="ad-placeholder rounded-xl p-4 text-center border border-gray-200">
+                    <i class="fas fa-building text-gray-400 mb-1"></i>
+                    <p class="text-xs text-gray-500">عروض عقارية مميزة</p>
+                    <div class="mt-2 h-28 bg-gray-100 rounded flex items-center justify-center text-gray-400 text-xs">إعلانك هنا</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- نموذج للفوتر المطور -->
+    <footer class="footer-bg text-white mt-12">
+        <!-- القسم العلوي مع الخريطة والشعار -->
+        <div class="container mx-auto px-4 md:px-6 py-12 md:py-16">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                
+                <!-- العمود الأول: الشعار والمعلومات -->
+                <div class="lg:col-span-4 text-center lg:text-right">
+                    <div class="flex justify-center lg:justify-start mb-6">
+                        <div class="bg-white/10 backdrop-blur-sm p-4 rounded-2xl inline-block border border-white/20">
+                            <div class="text-5xl font-bold text-white">
+                                <span class="text-red-500">بوابة</span>
+                                <span>المشاريع</span>
+                            </div>
+                            <p class="text-sm text-gray-300 mt-2 text-center">السعودية الإخبارية</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        المنصة الأولى المتخصصة في رصد ومتابعة أخبار المشاريع الكبرى في المملكة العربية السعودية، نقدم لكم أحدث الأخبار والتقارير الحصرية لحظة بلحظة.
+                    </p>
+                    <div class="flex justify-center lg:justify-start gap-3 mb-6">
+                        <span class="text-xs bg-white/10 px-3 py-1 rounded-full">✓ دقة في النقل</span>
+                        <span class="text-xs bg-white/10 px-3 py-1 rounded-full">✓ سرعة في التغطية</span>
+                        <span class="text-xs bg-white/10 px-3 py-1 rounded-full">✓ مصداقية عالية</span>
+                    </div>
+                </div>
+
+                <!-- العمود الثاني: خريطة الموقع (الأقسام الرئيسية) -->
+                <div class="lg:col-span-5">
+                    <h3 class="text-red-500 font-bold text-2xl mb-6 text-center lg:text-right relative inline-block lg:block">
+                        خريطة الموقع
+                        <div class="absolute -bottom-2 right-0 w-12 h-0.5 bg-red-500 rounded-full lg:right-auto lg:left-0"></div>
+                    </h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                        <!-- العمود الأول -->
+                        <div>
+                            <h4 class="text-white font-semibold mb-3 border-r-2 border-red-500 pr-3">الأخبار</h4>
+                            <ul class="space-y-2 text-sm">
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">أخبار عاجلة</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">أخبار اليوم</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">حوادث</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">سياسة وتقارير</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">عرب وعالم</a></li>
+                            </ul>
+                        </div>
+                        <!-- العمود الثاني -->
+                        <div>
+                            <h4 class="text-white font-semibold mb-3 border-r-2 border-red-500 pr-3">القطاعات</h4>
+                            <ul class="space-y-2 text-sm">
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">عقارات</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">مقاولات وإنشاءات</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">أمن وسلامة</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">تشطيبات وديكورات</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">تقنيات اقتصادية</a></li>
+                            </ul>
+                        </div>
+                        <!-- العمود الثالث -->
+                        <div>
+                            <h4 class="text-white font-semibold mb-3 border-r-2 border-red-500 pr-3">منوعات</h4>
+                            <ul class="space-y-2 text-sm">
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">رياضة</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">تكنولوجيا</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">صحة ومنوعات</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">فن ومشاهير</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">فيديوهات</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- العمود الثالث: التواصل والنشرة البريدية -->
+                <div class="lg:col-span-3">
+                    <h3 class="text-red-500 font-bold text-2xl mb-6 text-center lg:text-right">
+                        تواصل معنا
+                    </h3>
+                    
+                    <!-- وسائل التواصل الاجتماعي -->
+                    <div class="flex justify-center lg:justify-start gap-3 mb-8">
+                        <a href="#" class="social-icon w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-500 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-500 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-500 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-500 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-icon w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-500 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-500 transition">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                    </div>
+
+                    <!-- النشرة البريدية -->
+                    <div class="bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10">
+                        <h4 class="font-bold mb-3 text-center lg:text-right">📧 النشرة الإخبارية</h4>
+                        <p class="text-xs text-gray-300 mb-3 text-center lg:text-right">اشترك ليصلك أحدث الأخبار مباشرة</p>
+                        <form class="flex flex-col gap-2">
+                            <input type="email" placeholder="بريدك الإلكتروني" class="newsletter-input bg-white/20 rounded-lg px-4 py-2 text-sm text-white placeholder:text-gray-400 border border-white/20 focus:border-red-500 transition">
+                            <button class="bg-red-500 hover:bg-red-600 transition rounded-lg px-4 py-2 text-sm font-bold">
+                                اشترك الآن
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- روابط التطبيقات (اختياري) -->
+            <div class="mt-12 pt-8 border-t border-white/10">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div class="text-center md:text-right">
+                        <p class="text-sm text-gray-300">حمّل تطبيقنا على هاتفك</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="#" class="app-btn flex items-center gap-2 bg-white/10 hover:bg-white/20 rounded-lg px-4 py-2 transition">
+                            <i class="fab fa-google-play text-xl"></i>
+                            <span class="text-sm">Google Play</span>
+                        </a>
+                        <a href="#" class="app-btn flex items-center gap-2 bg-white/10 hover:bg-white/20 rounded-lg px-4 py-2 transition">
+                            <i class="fab fa-apple text-xl"></i>
+                            <span class="text-sm">App Store</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- الشريط السفلي (حقوق النشر والروابط) -->
+        <div class="border-t border-white/10 bg-black/20">
+            <div class="container mx-auto px-4 md:px-6 py-5">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-300">
+                    <div class="text-center md:text-right order-2 md:order-1">
+                        © <span id="footer-year"></span> 
+                        البوابة الإخبارية السعودية - جميع الحقوق محفوظة
+                    </div>
+                    <div class="flex gap-4 order-1 md:order-2">
+                        <a href="#" class="hover:text-red-400 transition text-xs">الرئيسية</a>
+                        <span class="text-white/20">|</span>
+                        <a href="#" class="hover:text-red-400 transition text-xs">سياسة الخصوصية</a>
+                        <span class="text-white/20">|</span>
+                        <a href="#" class="hover:text-red-400 transition text-xs">اتصل بنا</a>
+                        <span class="text-white/20">|</span>
+                        <a href="#" class="hover:text-red-400 transition text-xs">شروط الاستخدام</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // تحديث السنة تلقائياً
+        document.getElementById("footer-year").textContent = new Date().getFullYear();
+        
+        // تأثيرات إضافية (اختيارية)
+        document.querySelectorAll('.footer-link').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(-5px)';
+            });
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0)';
+            });
+        });
+    </script>
+        <style>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        .footer-bg {
+            background: linear-gradient(135deg, #0B2B44 0%, #062035 100%);
+        }
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .footer-link {
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+        .footer-link:hover {
+            transform: translateX(-5px);
+            color: #E53E3E !important;
+        }
+        .newsletter-input {
+            transition: all 0.3s ease;
+        }
+        .newsletter-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.3);
+        }
+        .app-btn {
+            transition: all 0.3s ease;
+        }
+        .app-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .border-glow {
+            border-image: linear-gradient(135deg, #E53E3E, #0B3B66) 1;
+        }
+    </style>
+
+    <script>
+        // ==================== أخبار العقارات (Object داخلي) ====================
+        const realEstateArticles = [
+            { id: 1, title: "إطلاق أكبر مشروع سكني في شمال الرياض بـ 15 ألف وحدة", summary: "أعلنت الهيئة العامة للعقار عن إطلاق مشروع سكني ضخم يضم 15 ألف وحدة سكنية متكاملة الخدمات في شمال الرياض، باستثمارات تتجاوز 10 مليارات ريال.", date: "2026-06-06", category: "مشاريع سكنية", image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=200&h=140&q=80", views: 12500 },
+            { id: 2, title: "ارتفاع أسعار العقارات في جدة بنسبة 8% خلال الربع الأول", summary: "كشف تقرير حديث عن ارتفاع أسعار العقارات في جدة بنسبة 8% مقارنة بالعام الماضي، مدعومة بمشاريع البنية التحتية والتطوير السياحي.", date: "2026-06-05", category: "تحليل سوق", image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=200&h=140&q=80", views: 8900 },
+            { id: 3, title: "انطلاق معرض الرياض العقاري الدولي بمشاركة 200 شركة", summary: "تحت رعاية وزير الشؤون البلدية، انطلق معرض الرياض العقاري بمشاركة 200 شركة محلية وعالمية لعرض أحدث المشاريع والفرص الاستثمارية.", date: "2026-06-04", category: "أخبار المعارض", image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=200&h=140&q=80", views: 6700 },
+            { id: 4, title: "البنك العقاري يعلن عن قروض تمويلية جديدة بفوائد مخفضة", summary: "أطلق البنك العقاري السعودي حزمة من القروض التمويلية للمواطنين بفوائد مخفضة تصل إلى 2.5%، لدعم تملك المساكن.", date: "2026-06-03", category: "تمويل عقاري", image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=200&h=140&q=80", views: 15400 },
+            { id: 5, title: "الدار العقارية توقع اتفاقية لتنفيذ 3 أبراج سكنية في الخبر", summary: "وقعت شركة الدار العقارية اتفاقية مع إحدى كبرى شركات المقاولات لتنفيذ 3 أبراج سكنية فاخرة في منطقة الخبر بتكلفة 800 مليون ريال.", date: "2026-06-02", category: "صفقات عقارية", image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=200&h=140&q=80", views: 5400 },
+            { id: 6, title: "توجيهات ملكية بتطوير الواجهة البحرية في ينبع", summary: "أصدر خادم الحرمين الشريفين توجيهات بتطوير الواجهة البحرية في ينبع بمشاريع عقارية وسياحية ضخمة تهدف لتعزيز السياحة الساحلية.", date: "2026-06-01", category: "مشاريع كبرى", image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=200&h=140&q=80", views: 11200 },
+            { id: 7, title: "تراجع إيجارات الشقق السكنية في الدمام بنسبة 5%", summary: "أظهرت دراسة متخصصة تراجع متوسط أسعار إيجارات الشقق في الدمام بنسبة 5% نتيجة زيادة المعروض من الوحدات السكنية.", date: "2026-05-30", category: "سوق الإيجار", image: "https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?auto=format&fit=crop&w=200&h=140&q=80", views: 4300 },
+            { id: 8, title: "إنجاز 45% من مشروع روشن في الرياض", summary: "أعلنت شركة روشن العقارية عن إنجاز 45% من المرحلة الأولى لمشروع روشن السكني في الرياض، والذي يضم أكثر من 30 ألف وحدة.", date: "2026-05-28", category: "مشاريع سكنية", image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=200&h=140&q=80", views: 9800 },
+            { id: 9, title: "أفضل 5 أحياء للاستثمار العقاري في مكة المكرمة", summary: "تقرير متخصص يسلط الضوء على أفضل الأحياء السكنية في مكة المكرمة للاستثمار العقاري، مع تحليل العوائد المتوقعة.", date: "2026-05-25", category: "استثمار عقاري", image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?auto=format&fit=crop&w=200&h=140&q=80", views: 7600 },
+            { id: 10, title: "افتتاح أول مجمع سكني ذكي في العاصمة الإدارية", summary: "تم افتتاح أول مجمع سكني يعمل بتقنيات الذكاء الاصطناعي وإنترنت الأشياء في العاصمة الإدارية الجديدة، بشراكة سعودية صينية.", date: "2026-05-22", category: "تقنية عقارية", image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=200&h=140&q=80", views: 10200 },
+            { id: 11, title: "قرار جديد بتنظيم ملكية الأجانب للعقارات في المناطق السياحية", summary: "أصدرت وزارة الشؤون البلدية قرارًا جديدًا يسمح للمستثمرين الأجانب بتملك العقارات في 5 مناطق سياحية رئيسية.", date: "2026-05-20", category: "أنظمة وتشريعات", image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=200&h=140&q=80", views: 13500 },
+            { id: 12, title: "إطلاق منصة إلكترونية لتوثيق عقود الإيجار إلكترونياً", summary: "أطلقت وزارة الإسكان منصة جديدة لتوثيق عقود الإيجار إلكترونياً، مما يسهل الإجراءات ويحد من النزاعات العقارية.", date: "2026-05-18", category: "خدمات عقارية", image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=200&h=140&q=80", views: 5900 },
+            { id: 13, title: "شركة عقارية كبرى تعلن عن توسعاتها في السوق السعودي", summary: "أعلنت إحدى كبرى الشركات العقارية في المنطقة عن خطط توسعية طموحة في السوق السعودي باستثمارات تصل إلى 2 مليار ريال.", date: "2026-05-15", category: "أخبار الشركات", image: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=200&h=140&q=80", views: 4800 },
+            { id: 14, title: "انخفاض أسعار الأراضي البيضاء بعد تطبيق الرسوم", summary: "سجلت أسعار الأراضي البيضاء في الرياض وجدة انخفاضًا ملحوظًا بعد تطبيق نظام الرسوم على الأراضي غير المطورة.", date: "2026-05-12", category: "تحليل سوق", image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=200&h=140&q=80", views: 7200 },
+            { id: 15, title: "إطلاق جائزة التميز العقاري بنسختها السابعة", summary: "أعلنت اللجنة المنظمة عن إطلاق جائزة التميز العقاري بنسختها السابعة، لتكريم أفضل المشاريع والشركات العقارية.", date: "2026-05-10", category: "جوائز", image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=200&h=140&q=80", views: 3100 },
+            { id: 16, title: "مشروع ضخم للوحدات السكنية منخفضة التكلفة في المدن الصناعية", summary: "وقعت وزارة الإسكان اتفاقية لتنفيذ 5 آلاف وحدة سكنية منخفضة التكلفة في المدن الصناعية لدعم العاملين.", date: "2026-05-08", category: "إسكان اجتماعي", image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=200&h=140&q=80", views: 6300 }
+        ];
+
+        let currentPageNum = 1;
+        const ITEMS_PER_PAGE = 8;
+        const totalPages = Math.ceil(realEstateArticles.length / ITEMS_PER_PAGE);
+
+        function renderNewsList(page) {
+            const start = (page - 1) * ITEMS_PER_PAGE;
+            const end = start + ITEMS_PER_PAGE;
+            const pageArticles = realEstateArticles.slice(start, end);
+            const container = document.getElementById('news-list-container');
+            
+            if (pageArticles.length === 0) {
+                container.innerHTML = '<div class="bg-white rounded-xl p-8 text-center text-gray-500">لا توجد أخبار عقارية في هذه الصفحة</div>';
+                return;
+            }
+            
+            const cardsHTML = pageArticles.map(article => `
+                <div class="news-card bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-all">
+                    <div class="flex flex-row gap-4 p-3">
+                        <div class="flex-shrink-0 w-28 h-24 md:w-32 md:h-28 rounded-lg overflow-hidden bg-gray-100">
+                            <img src="${article.image}" class="w-full h-full object-cover" alt="${article.title}">
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 text-xs text-gray-400 mb-1">
+                                <span class="bg-primary/10 text-primary px-2 py-0.5 rounded-full text-xs font-semibold">${article.category}</span>
+                                <span><i class="far fa-calendar-alt ml-1"></i> ${article.date}</span>
+                            </div>
+                            <h3 class="font-bold text-base md:text-lg leading-tight mb-1 line-clamp-1">${article.title}</h3>
+                            <p class="text-gray-500 text-sm line-clamp-2">${article.summary.substring(0, 100)}...</p>
+                            <div class="flex items-center gap-3 mt-2 text-xs text-gray-400">
+                                <span><i class="far fa-eye ml-1"></i> ${article.views.toLocaleString()}</span>
+                                <a href="article.html?id=${article.id}" class="text-primary font-semibold text-xs">اقرأ المزيد <i class="fas fa-arrow-left mr-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            
+            container.innerHTML = cardsHTML;
+            document.getElementById('total-badge').innerHTML = `🏢 عرض ${pageArticles.length} من ${realEstateArticles.length} خبر عقاري`;
+        }
+        
+        function updateMostRead() {
+            const mostRead = [...realEstateArticles].sort((a,b) => b.views - a.views).slice(0, 5);
+            const listContainer = document.getElementById('most-read-list');
+            listContainer.innerHTML = mostRead.map((item, idx) => `
+                <div class="flex gap-3 items-start cursor-pointer group most-read-item" data-id="${item.id}">
+                    <div class="text-accent font-bold text-lg w-6">${idx+1}</div>
+                    <div class="flex-1">
+                        <h4 class="font-semibold text-sm group-hover:text-primary transition line-clamp-2">${item.title}</h4>
+                        <div class="flex items-center gap-2 text-xs text-gray-400 mt-1">
+                            <span><i class="far fa-eye"></i> ${item.views.toLocaleString()}</span>
+                            <span>${item.date}</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            
+            document.querySelectorAll('.most-read-item').forEach(el => {
+                el.addEventListener('click', () => {
+                    const articleId = parseInt(el.getAttribute('data-id'));
+                    const articleIndex = realEstateArticles.findIndex(a => a.id === articleId);
+                    if (articleIndex !== -1) {
+                        const targetPage = Math.floor(articleIndex / ITEMS_PER_PAGE) + 1;
+                        if (targetPage !== currentPageNum) {
+                            currentPageNum = targetPage;
+                            renderNewsList(currentPageNum);
+                            renderPagination();
+                        }
+                        document.getElementById('news-list-container')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+        }
+        
+        function renderPagination() {
+            const paginationNav = document.getElementById('pagination-nav');
+            if (!paginationNav) return;
+            
+            let pagesHTML = '';
+            pagesHTML += `<button id="prev-page" class="px-3 py-2 border rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition ${currentPageNum === 1 ? 'opacity-50 cursor-not-allowed' : ''}"><i class="fas fa-chevron-right"></i></button>`;
+            
+            for (let i = 1; i <= totalPages; i++) {
+                const isActive = (i === currentPageNum);
+                pagesHTML += `<button data-page="${i}" class="page-num w-10 h-10 rounded-lg border ${isActive ? 'bg-primary text-white border-primary' : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-100'} transition">${i}</button>`;
+            }
+            
+            pagesHTML += `<button id="next-page" class="px-3 py-2 border rounded-lg bg-white text-gray-600 hover:bg-gray-50 transition ${currentPageNum === totalPages ? 'opacity-50 cursor-not-allowed' : ''}"><i class="fas fa-chevron-left"></i></button>`;
+            
+            paginationNav.innerHTML = pagesHTML;
+            
+            document.querySelectorAll('.page-num').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const page = parseInt(btn.getAttribute('data-page'));
+                    if (!isNaN(page) && page !== currentPageNum) {
+                        currentPageNum = page;
+                        renderNewsList(currentPageNum);
+                        renderPagination();
+                        updateMostRead();
+                        document.getElementById('news-list-container')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+            
+            const prevBtn = document.getElementById('prev-page');
+            const nextBtn = document.getElementById('next-page');
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => {
+                    if (currentPageNum > 1) {
+                        currentPageNum--;
+                        renderNewsList(currentPageNum);
+                        renderPagination();
+                        updateMostRead();
+                        document.getElementById('news-list-container')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            }
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    if (currentPageNum < totalPages) {
+                        currentPageNum++;
+                        renderNewsList(currentPageNum);
+                        renderPagination();
+                        updateMostRead();
+                        document.getElementById('news-list-container')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            }
+        }
+        
+        // Mobile Menu
+        function initMobileMenu() {
+            const toggleBtn = document.getElementById('mobile-menu-toggle');
+            const mobileMenu = document.getElementById('mobile-nav-menu');
+            const body = document.body;
+            let isMenuOpen = false;
+            
+            function toggleMenu() {
+                isMenuOpen = !isMenuOpen;
+                if (isMenuOpen) {
+                    mobileMenu.classList.remove('mobile-nav-closed');
+                    mobileMenu.classList.add('mobile-nav-open');
+                    body.classList.add('no-scroll');
+                    toggleBtn.innerHTML = '<i class="fas fa-times"></i>';
+                } else {
+                    mobileMenu.classList.remove('mobile-nav-open');
+                    mobileMenu.classList.add('mobile-nav-closed');
+                    body.classList.remove('no-scroll');
+                    toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            }
+            
+            if (toggleBtn && mobileMenu) {
+                toggleBtn.addEventListener('click', toggleMenu);
+                const allLinks = mobileMenu.querySelectorAll('a');
+                allLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (isMenuOpen) toggleMenu();
+                    });
+                });
+            }
+        }
+        
+        function setCurrentDate() {
+            const dateSpan = document.getElementById('current-date');
+            if(dateSpan) {
+                const now = new Date();
+                dateSpan.innerText = now.toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' });
+            }
+        }
+        
+        function initDarkMode() {
+            const toggleBtn = document.getElementById('dark-mode-toggle');
+            if (!toggleBtn) return;
+            toggleBtn.addEventListener('click', () => {
+                document.body.classList.toggle('bg-gray-900');
+                document.body.classList.toggle('text-gray-100');
+                document.body.classList.toggle('bg-gray-50');
+                const isDark = document.body.classList.contains('bg-gray-900');
+                document.querySelectorAll('.bg-white, .ad-placeholder, .bg-gray-50').forEach(el => {
+                    if (isDark) { el.classList.add('bg-gray-800', 'text-gray-200'); el.classList.remove('bg-white', 'bg-gray-50'); }
+                    else { el.classList.remove('bg-gray-800', 'text-gray-200'); el.classList.add('bg-white'); }
+                });
+                toggleBtn.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            });
+        }
+        
+        function init() {
+            setCurrentDate();
+            renderNewsList(currentPageNum);
+            renderPagination();
+            updateMostRead();
+            initDarkMode();
+            initMobileMenu();
+        }
+        
+        init();
+    </script>
+</body>
+</html>
