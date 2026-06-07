@@ -3,141 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>البوابة الإخبارية  | من نحن - قصتنا ورؤيتنا</title>
+    <title>من نحن | البوابة الإخبارية - قصتنا ورسالتنا وأهدافنا</title>
+    <meta name="description" content="تعرف على البوابة الإخبارية، قصتنا ورسالتنا ورؤيتنا وأهدافنا. منصة إخبارية سعودية متخصصة في تغطية أخبار المشاريع الكبرى والقطاعات الحيوية في المملكة.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * { font-family: 'Cairo', sans-serif; }
+        body { font-family: 'Cairo', sans-serif; }
         .bg-primary { background-color: #0B3B66; }
         .text-primary { color: #0B3B66; }
         .bg-accent { background-color: #E53E3E; }
         .border-accent { border-color: #E53E3E; }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInLeft {
-            from { opacity: 0; transform: translateX(-50px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        @keyframes fadeInRight {
-            from { opacity: 0; transform: translateX(50px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        @keyframes scaleIn {
-            from { opacity: 0; transform: scale(0.8); }
-            to { opacity: 1; transform: scale(1); }
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        @keyframes pulse-border {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(229, 62, 62, 0.4); }
-            50% { box-shadow: 0 0 0 15px rgba(229, 62, 62, 0); }
-        }
-        
-        .animate-fadeUp { animation: fadeInUp 0.8s ease forwards; }
-        .animate-fadeLeft { animation: fadeInLeft 0.8s ease forwards; }
-        .animate-fadeRight { animation: fadeInRight 0.8s ease forwards; }
-        .animate-scale { animation: scaleIn 0.6s ease forwards; }
-        .animate-float { animation: float 4s ease-in-out infinite; }
-        .delay-100 { animation-delay: 0.1s; }
-        .delay-200 { animation-delay: 0.2s; }
-        .delay-300 { animation-delay: 0.3s; }
-        .delay-400 { animation-delay: 0.4s; }
-        
-        /* Glassmorphism */
-        .glass {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .glass-dark {
-            background: rgba(11, 59, 102, 0.8);
-            backdrop-filter: blur(10px);
-        }
-        
-        /* Hero Parallax */
-        .hero-parallax {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        
-        /* Counter Styles */
-        .counter-number {
-            font-size: 3rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #0B3B66 0%, #E53E3E 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        /* Team Card */
-        .team-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .team-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 30px 40px -20px rgba(0, 0, 0, 0.3);
-        }
-        
-        /* Timeline */
-        .timeline-line {
-            position: relative;
-        }
-        .timeline-line::before {
-            content: '';
-            position: absolute;
-            right: 50%;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, #0B3B66, #E53E3E);
-            transform: translateX(50%);
-        }
-        
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 10px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb { background: linear-gradient(135deg, #0B3B66, #E53E3E); border-radius: 10px; }
-        
-        /* Hover Effects */
-        .hover-lift {
+        .ad-placeholder { background: linear-gradient(135deg, #f8f9fc 0%, #eef2f6 100%); }
+        .value-card {
             transition: all 0.3s ease;
         }
-        .hover-lift:hover {
+        .value-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .mobile-nav-open {
+            max-height: 500px;
+            opacity: 1;
+            visibility: visible;
+        }
+        .mobile-nav-closed {
+            max-height: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+        body.no-scroll {
+            overflow: hidden;
+        }
+        .timeline-item {
+            position: relative;
+            padding-right: 30px;
+            border-right: 3px solid #E53E3E;
+            margin-bottom: 30px;
+        }
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            right: -9px;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #E53E3E;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.2);
+        }
+        .team-member {
+            transition: all 0.3s ease;
+        }
+        .team-member:hover {
+            transform: translateY(-5px);
         }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
+<div class="sticky top-0 z-50">
     <!-- Header -->
     <header class="bg-white border-b shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center py-4">
-                <div class="text-2xl md:text-3xl font-extrabold tracking-tight">
-                    <a href="index.html" class="text-primary">بوابة<span class="text-accent">المشاريع</span> <span class="text-gray-800"></span></a>
+            <!-- Top Bar -->
+            <div class="flex justify-between items-center py-2 text-sm text-gray-600 border-b">
+                <div id="current-date" class="font-medium"></div>
+                <div class="flex items-center gap-5">
+                    <a href="index.html" class="hover:text-primary transition">الرئيسية</a>
+                    <a href="#" class="hover:text-primary transition">سياسة الخصوصية</a>
+                    <a href="#" class="hover:text-primary transition">اتصل بنا</a>
+                    <button id="dark-mode-btn" class="w-7 h-7 rounded-full bg-gray-100 hover:bg-gray-200 transition flex items-center justify-center">
+                        <i class="fas fa-moon text-gray-600"></i>
+                    </button>
                 </div>
-                <button class="md:hidden text-2xl text-primary" id="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+            <!-- Main Header -->
+            <div class="flex justify-between items-center py-5">
+                <div class="flex gap-3">
+                    <a href="#" class="w-9 h-9 bg-red-600 text-white rounded-full flex items-center justify-center hover:scale-110 transition transform"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="w-9 h-9 bg-gradient-to-tr from-pink-500 to-orange-500 text-white rounded-full flex items-center justify-center hover:scale-110 transition transform"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-9 h-9 bg-sky-500 text-white rounded-full flex items-center justify-center hover:scale-110 transition transform"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="w-9 h-9 bg-blue-700 text-white rounded-full flex items-center justify-center hover:scale-110 transition transform"><i class="fab fa-facebook-f"></i></a>
+                </div>
+                <div class="text-center">
+                    <h1 class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">
+                        البوابة الإخبارية 
+                    </h1>
+                    <p class="text-sm text-gray-500 mt-1 font-medium">
+                        أخبار السعودية والخليج والعالم لحظة بلحظة
+                    </p>
+                </div>
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="بحث..." class="border rounded-full py-2 px-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-primary w-64">
+                    <i class="fas fa-search absolute right-3 top-3 text-gray-400"></i>
+                </div>
             </div>
         </div>
     </header>
 
-    <!-- Navigation -->
-    <nav class="bg-primary text-white sticky top-[72px] z-40 shadow-lg hidden md:block">
+    <!-- Navigation Bar - Desktop -->
+    <nav class="bg-primary text-white z-40 shadow-lg hidden md:block">
         <div class="container mx-auto px-4">
             <ul class="flex justify-center space-x-reverse space-x-8 py-3 text-sm font-semibold">
-                <li><a href="index.html" class="hover:text-amber-200 transition">الصفحة الرئيسية</a></li>
-                <li><a href="#" class="text-amber-200 border-b-2 border-amber-300 pb-1">من نحن</a></li>
+                <li><a href="index.html" class="hover:text-amber-200 transition">الرئيسية</a></li>
                 <li><a href="breaking-news.html" class="hover:text-amber-200 transition">أخبار عاجلة</a></li>
                 <li><a href="daily-news.html" class="hover:text-amber-200 transition">أخبار اليوم</a></li>
                 <li><a href="real-estate.html" class="hover:text-amber-200 transition">عقارات</a></li>
@@ -145,376 +118,514 @@
                 <li><a href="security-systems.html" class="hover:text-amber-200 transition">أمن وسلامة</a></li>
                 <li><a href="interior-design.html" class="hover:text-amber-200 transition">تشطيبات</a></li>
                 <li><a href="sports.html" class="hover:text-amber-200 transition">رياضة</a></li>
-                <li><a href="reports.html" class="hover:text-amber-200 transition">تقارير</a></li>
+                <li><a href="reports-analysis.html" class="hover:text-amber-200 transition">تقارير</a></li>
+                <li><a href="#" class="text-amber-200 border-b-2 border-amber-300 pb-1 transition">من نحن</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden fixed inset-0 bg-primary z-50 transform transition-transform duration-300 translate-x-full">
-        <div class="flex justify-between items-center p-4 border-b border-white/20">
-            <h3 class="text-white font-bold text-lg">القائمة</h3>
-            <button id="close-menu" class="text-white text-3xl">&times;</button>
-        </div>
-        <ul class="p-4 space-y-3">
-            <li><a href="index.html" class="block text-white py-2 hover:bg-white/10 rounded-lg px-3 transition">🏠 الرئيسية</a></li>
-            <li><a href="#" class="block text-amber-200 py-2 hover:bg-white/10 rounded-lg px-3 transition">📖 من نحن</a></li>
-            <li><a href="breaking-news.html" class="block text-white py-2 hover:bg-white/10 rounded-lg px-3 transition">⚡ أخبار عاجلة</a></li>
-            <li><a href="daily-news.html" class="block text-white py-2 hover:bg-white/10 rounded-lg px-3 transition">📰 أخبار اليوم</a></li>
-            <li><a href="real-estate.html" class="block text-white py-2 hover:bg-white/10 rounded-lg px-3 transition">🏢 عقارات</a></li>
-            <li><a href="construction.html" class="block text-white py-2 hover:bg-white/10 rounded-lg px-3 transition">🏗️ مقاولات</a></li>
-            <li><a href="security-systems.html" class="block text-white py-2 hover:bg-white/10 rounded-lg px-3 transition">🛡️ أمن وسلامة</a></li>
-            <li><a href="interior-design.html" class="block text-white py-2 hover:bg-white/10 rounded-lg px-3 transition">🎨 تشطيبات</a></li>
-            <li><a href="sports.html" class="block text-white py-2 hover:bg-white/10 rounded-lg px-3 transition">⚽ رياضة</a></li>
-            <li><a href="reports.html" class="block text-white py-2 hover:bg-white/10 rounded-lg px-3 transition">📊 تقارير</a></li>
+    <!-- Mobile Menu Button & Menu -->
+    <div class="md:hidden bg-primary p-3 flex justify-between items-center">
+        <button id="mobile-menu-toggle" class="text-white text-2xl">
+            <i class="fas fa-bars"></i>
+        </button>
+        <span class="text-white text-sm font-bold">القائمة</span>
+    </div>
+    <div id="mobile-nav-menu" class="md:hidden bg-primary shadow-xl transition-all duration-300 ease-in-out overflow-hidden z-50 mobile-nav-closed">
+        <ul class="flex flex-col py-3 text-sm font-semibold">
+            <li><a href="index.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🏠 الرئيسية</a></li>
+            <li><a href="breaking-news.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">⚡ أخبار عاجلة</a></li>
+            <li><a href="daily-news.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">📰 أخبار اليوم</a></li>
+            <li><a href="real-estate.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🏢 عقارات</a></li>
+            <li><a href="construction.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🏗️ مقاولات</a></li>
+            <li><a href="security-systems.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🛡️ أمن وسلامة</a></li>
+            <li><a href="interior-design.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🎨 تشطيبات</a></li>
+            <li><a href="sports.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">⚽ رياضة</a></li>
+            <li><a href="reports-analysis.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">📊 تقارير</a></li>
+            <li><a href="#" class="block px-6 py-3 hover:bg-primary/80 text-white font-bold">👥 من نحن</a></li>
         </ul>
     </div>
+</div>
 
-    <main>
-        <!-- Hero Section - Premium -->
-        <section class="relative min-h-[85vh] flex items-center hero-parallax" style="background-image: url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=2000&q=80'); background-position: center 30%;">
-            <div class="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-transparent"></div>
-            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.03"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
-            <div class="container mx-auto px-4 relative z-10">
-                <div class="max-w-3xl">
-                    <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-5 py-2 text-sm text-white mb-6 animate-scale">
-                        <i class="fas fa-crown text-amber-400"></i>
-                        <span>منذ 2019</span>
-                        <i class="fas fa-certificate text-amber-400 mr-2"></i>
-                        <span>رائدة في الإعلام الاقتصادي</span>
-                    </div>
-                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 animate-fadeUp leading-tight">
-                        قصتنا
-                        <span class="text-accent">تلهم</span>
-                        المستقبل
-                    </h1>
-                    <p class="text-xl md:text-2xl text-white/90 mb-8 animate-fadeUp delay-100 max-w-2xl leading-relaxed">
-                        منصة إعلامية سعودية متخصصة، نروي قصة التحول والنهضة، ونساهم في بناء مستقبل المملكة من خلال إعلام احترافي وموضوعي.
+<main class="container mx-auto px-4 py-6">
+    <!-- Breadcrumb -->
+    <nav class="flex mb-5 text-gray-500 text-sm">
+        <ol class="inline-flex items-center space-x-reverse space-x-2">
+            <li><a href="index.html" class="hover:text-primary">الرئيسية</a></li>
+            <li><i class="fas fa-chevron-left text-xs mx-2"></i><span class="text-primary font-bold">من نحن</span></li>
+        </ol>
+    </nav>
+
+    <div class="border-b border-gray-200 pb-3 mb-6">
+        <h1 class="text-2xl md:text-3xl font-bold text-primary border-r-4 border-accent pr-4 inline-block">من نحن</h1>
+        <span class="mr-4 text-sm bg-gray-100 text-primary px-3 py-1 rounded-full">قصتنا ورسالتنا</span>
+    </div>
+
+    <!-- Content Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- Main Content Area (يمين) -->
+        <div class="lg:col-span-8">
+            
+            <!-- Hero About Section -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden mb-8">
+                <img src="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1200&h=400&q=80" alt="البوابة الإخبارية" class="w-full h-48 md:h-64 object-cover">
+                <div class="p-6 md:p-8">
+                    <h2 class="text-2xl md:text-3xl font-bold text-primary mb-4">البوابة الإخبارية .. منصة المستقبل الإعلامي في السعودية</h2>
+                    <p class="text-gray-600 leading-relaxed mb-4">
+                        تأسست <strong>البوابة الإخبارية</strong> بهدف تقديم محتوى إخباري متميز ومهني يواكب التطور الهائل الذي تشهده المملكة العربية السعودية في مختلف القطاعات. نحن لسنا مجرد موقع إخباري عابر، بل بوابة متكاملة تجمع بين الدقة في النقل، والسرعة في التغطية، والمصداقية العالية في الطرح. نركز في تغطيتنا على المشاريع الكبرى، والقطاعات الحيوية مثل العقارات والمقاولات والتشطيبات والأمن والسلامة، إلى جانب الرياضة والتقارير التحليلية العميقة. نسعى لأن نكون الوجهة الأولى لكل من يبحث عن الحقيقة والخبر الموثوق.
                     </p>
-                    <div class="flex gap-4 animate-fadeUp delay-200">
-                        <a href="#vision" class="bg-accent hover:bg-red-700 transition px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl">تعرف علينا <i class="fas fa-arrow-left mr-2"></i></a>
-                        <a href="#contact" class="border-2 border-white hover:bg-white hover:text-primary transition px-8 py-3 rounded-full font-bold">تواصل معنا</a>
-                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        انطلقت البوابة الإخبارية في عام 2020 كمنصة إلكترونية مستقلة، واستطاعت خلال سنوات قليلة أن تحقق حضوراً متميزاً في الساحة الإعلامية السعودية، بفضل فريقها الشاب الطموح وكوادرها المهنية ذات الخبرات الواسعة. نؤمن بأن الإعلام رسالة قبل أن يكون مهنة، ولذلك نحرص على الالتزام بأعلى معايير المسؤولية المجتمعية والمهنية.
+                    </p>
                 </div>
             </div>
-            <div class="absolute bottom-0 left-0 right-0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" fill="#f9fafb"><path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path></svg>
-            </div>
-        </section>
 
-        <!-- Stats Section - Premium -->
-        <section class="py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-                    <div class="text-center group cursor-pointer">
-                        <div class="text-5xl md:text-6xl font-black text-primary mb-2 group-hover:scale-110 transition transform inline-block">15k+</div>
-                        <p class="text-gray-500 font-medium">مقال وخبر</p>
-                        <div class="w-12 h-0.5 bg-accent mx-auto mt-3 opacity-0 group-hover:opacity-100 transition"></div>
+            <!-- Our Vision & Mission -->
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-6 border border-blue-100">
+                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-4">
+                        <i class="fas fa-eye text-2xl text-primary"></i>
                     </div>
-                    <div class="text-center group cursor-pointer">
-                        <div class="text-5xl md:text-6xl font-black text-primary mb-2 group-hover:scale-110 transition transform inline-block">50+</div>
-                        <p class="text-gray-500 font-medium">صحفي ومحرر</p>
-                        <div class="w-12 h-0.5 bg-accent mx-auto mt-3 opacity-0 group-hover:opacity-100 transition"></div>
+                    <h3 class="text-xl font-bold text-primary mb-3">رؤيتنا</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        أن نكون المنصة الإخبارية الرائدة في المملكة العربية السعودية والمنطقة، والمرجع الأول للمتابعين وصناع القرار في متابعة أخبار المشاريع الكبرى والقطاعات الحيوية، من خلال تقديم محتوى مهني متميز يعكس تطلعات رؤية السعودية 2030.
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-red-50 to-white rounded-2xl p-6 border border-red-100">
+                    <div class="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-4">
+                        <i class="fas fa-bullseye text-2xl text-accent"></i>
                     </div>
-                    <div class="text-center group cursor-pointer">
-                        <div class="text-5xl md:text-6xl font-black text-primary mb-2 group-hover:scale-110 transition transform inline-block">2M+</div>
-                        <p class="text-gray-500 font-medium">متابع شهرياً</p>
-                        <div class="w-12 h-0.5 bg-accent mx-auto mt-3 opacity-0 group-hover:opacity-100 transition"></div>
-                    </div>
-                    <div class="text-center group cursor-pointer">
-                        <div class="text-5xl md:text-6xl font-black text-primary mb-2 group-hover:scale-110 transition transform inline-block">2019</div>
-                        <p class="text-gray-500 font-medium">عام التأسيس</p>
-                        <div class="w-12 h-0.5 bg-accent mx-auto mt-3 opacity-0 group-hover:opacity-100 transition"></div>
-                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-3">رسالتنا</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        تقديم تغطية إخبارية شاملة ومتوازنة تعتمد على الدقة والمصداقية والسرعة، وتسليط الضوء على المشاريع التنموية الكبرى، وتمكين الجمهور من الوصول إلى المعلومات الموثوقة بأسلوب عصري جذاب.
+                    </p>
                 </div>
             </div>
-        </section>
 
-        <!-- Vision & Mission - Premium -->
-        <section id="vision" class="py-20">
-            <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
-                    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition duration-500">
-                        <div class="bg-gradient-to-r from-primary to-blue-700 p-1"></div>
-                        <div class="p-8">
-                            <div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 animate-float">
-                                <i class="fas fa-eye text-3xl text-primary"></i>
+            <!-- Our Story Timeline -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8 mb-8">
+                <h3 class="text-xl font-bold text-primary mb-6 border-r-4 border-accent pr-4">قصتنا في سطور</h3>
+                <div class="space-y-4">
+                    <div class="timeline-item">
+                        <div class="bg-gray-50 rounded-xl p-4">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="bg-accent text-white text-xs px-2 py-1 rounded-full">2020</span>
+                                <h4 class="font-bold text-gray-800">انطلاقة البوابة الإخبارية</h4>
                             </div>
-                            <h2 class="text-3xl font-bold text-gray-800 mb-4">رؤيتنا</h2>
-                            <p class="text-gray-600 leading-relaxed text-lg">أن نكون المصدر الأول والموثوق لكل ما يتعلق بأخبار المشاريع التنموية والإنشائية في المملكة العربية ، مساهمين في إبراز النهضة العمرانية التي تشهدها بلادنا تحقيقاً لرؤية 2030.</p>
+                            <p class="text-gray-600 text-sm">انطلقت البوابة الإخبارية كمنصة إلكترونية مستقلة، بطاقم شاب يضم نخبة من الصحفيين والمحررين السعوديين، بهدف تقديم بديل إعلامي مهني ومتميز.</p>
                         </div>
                     </div>
-                    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden transform hover:scale-105 transition duration-500 delay-100">
-                        <div class="bg-gradient-to-r from-accent to-red-700 p-1"></div>
-                        <div class="p-8">
-                            <div class="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 animate-float">
-                                <i class="fas fa-bullhorn text-3xl text-accent"></i>
+                    <div class="timeline-item">
+                        <div class="bg-gray-50 rounded-xl p-4">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="bg-accent text-white text-xs px-2 py-1 rounded-full">2021</span>
+                                <h4 class="font-bold text-gray-800">توسع التغطية إلى 8 قطاعات حيوية</h4>
                             </div>
-                            <h2 class="text-3xl font-bold text-gray-800 mb-4">رسالتنا</h2>
-                            <p class="text-gray-600 leading-relaxed text-lg">تقديم تغطية إخبارية شاملة واحترافية، تجمع بين الخبر السريع والتحليل العميق، لخدمة المستثمرين، المهندسين، والمواطنين المهتمين بقطاع العقارات والإنشاءات والتقنيات الاقتصادية.</p>
+                            <p class="text-gray-600 text-sm">وسعنا نطاق تغطيتنا لتشمل قطاعات العقارات، والمقاولات، والتشطيبات، والأمن والسلامة، بجانب الرياضة والأخبار العامة والتقارير التحليلية.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="bg-gray-50 rounded-xl p-4">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="bg-accent text-white text-xs px-2 py-1 rounded-full">2023</span>
+                                <h4 class="font-bold text-gray-800">مليون زائر شهرياً</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm">حققنا إنجاز تجاوز المليون زائر شهرياً، بفضل جودة المحتوى وسرعة التغطية وثقة الجمهور في مصداقيتنا.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="bg-gray-50 rounded-xl p-4">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="bg-accent text-white text-xs px-2 py-1 rounded-full">2025</span>
+                                <h4 class="font-bold text-gray-800">إطلاق التطبيق الرسمي للبوابة</h4>
+                            </div>
+                            <p class="text-gray-600 text-sm">أطلقنا التطبيق الرسمي للبوابة الإخبارية على متجر أبل وجوجل بلاي، ليصبح الوصول لأخبارنا أسرع وأسهل لمتابعينا في كل مكان.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Values Section - Premium Cards -->
-        <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <span class="text-accent font-bold text-sm uppercase tracking-wider">قيمنا الأساسية</span>
-                    <h2 class="text-4xl md:text-5xl font-bold text-primary mt-2 mb-4">مبادئ نؤمن بها</h2>
-                    <div class="w-20 h-1 bg-accent mx-auto"></div>
-                    <p class="text-gray-500 mt-4 max-w-2xl mx-auto">نعمل وفق منظومة من القيم الراسخة التي توجهنا نحو التميز</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-                    <div class="group bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer hover:-translate-y-2">
-                        <div class="w-20 h-20 bg-gradient-to-br from-primary to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:rotate-12 transition transform">
-                            <i class="fas fa-check-circle text-3xl text-white"></i>
+            <!-- Core Values -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8 mb-8">
+                <h3 class="text-xl font-bold text-primary mb-6 border-r-4 border-accent pr-4">قيمنا الأساسية</h3>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div class="value-card bg-gray-50 rounded-xl p-4 text-center">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-check-circle text-primary text-xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">المصداقية</h3>
-                        <p class="text-gray-500 text-sm">نتحرى الدقة في كل ما ننشره من أخبار وتقارير، ونلتزم بمصادر موثوقة</p>
+                        <h4 class="font-bold mb-1">المصداقية</h4>
+                        <p class="text-xs text-gray-500">نلتزم بالدقة والموضوعية في نقل الأخبار والمعلومات</p>
                     </div>
-                    <div class="group bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer hover:-translate-y-2 delay-100">
-                        <div class="w-20 h-20 bg-gradient-to-br from-primary to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:rotate-12 transition transform">
-                            <i class="fas fa-search text-3xl text-white"></i>
+                    <div class="value-card bg-gray-50 rounded-xl p-4 text-center">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-bolt text-primary text-xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">الشفافية</h3>
-                        <p class="text-gray-500 text-sm">نلتزم بالوضوح والموضوعية في طرح القضايا الاقتصادية دون تحيز</p>
+                        <h4 class="font-bold mb-1">السرعة</h4>
+                        <p class="text-xs text-gray-500">نسبق الجميع في تغطية الأحداث لحظة وقوعها</p>
                     </div>
-                    <div class="group bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer hover:-translate-y-2 delay-200">
-                        <div class="w-20 h-20 bg-gradient-to-br from-primary to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:rotate-12 transition transform">
-                            <i class="fas fa-lightbulb text-3xl text-white"></i>
+                    <div class="value-card bg-gray-50 rounded-xl p-4 text-center">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-chart-line text-primary text-xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">الابتكار</h3>
-                        <p class="text-gray-500 text-sm">نستخدم أحدث التقنيات الرقمية لتوصيل الخبر بشكل تفاعلي وجذاب</p>
+                        <h4 class="font-bold mb-1">الاحترافية</h4>
+                        <p class="text-xs text-gray-500">نعتمد أعلى معايير الجودة الإعلامية والمهنية</p>
                     </div>
-                    <div class="group bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer hover:-translate-y-2 delay-300">
-                        <div class="w-20 h-20 bg-gradient-to-br from-primary to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:rotate-12 transition transform">
-                            <i class="fas fa-flag-checkered text-3xl text-white"></i>
+                    <div class="value-card bg-gray-50 rounded-xl p-4 text-center">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-handshake text-primary text-xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">الوطنية</h3>
-                        <p class="text-gray-500 text-sm">نفخر بأن نكون صوتاً للنمو والازدهار في مملكتنا الغالية</p>
+                        <h4 class="font-bold mb-1">الشفافية</h4>
+                        <p class="text-xs text-gray-500">نشجع الحوار البناء ونتقبل الآراء المختلفة بموضوعية</p>
+                    </div>
+                    <div class="value-card bg-gray-50 rounded-xl p-4 text-center">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-users text-primary text-xl"></i>
+                        </div>
+                        <h4 class="font-bold mb-1">المسؤولية المجتمعية</h4>
+                        <p class="text-xs text-gray-500">نضع المصلحة العامة نصب أعيننا في كل ما ننشر</p>
+                    </div>
+                    <div class="value-card bg-gray-50 rounded-xl p-4 text-center">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-lightbulb text-primary text-xl"></i>
+                        </div>
+                        <h4 class="font-bold mb-1">الابتكار</h4>
+                        <p class="text-xs text-gray-500">نتبنى أحدث التقنيات الإعلامية والتقنيات الرقمية</p>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Team Section - Premium -->
-        <section class="py-20">
-            <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <span class="text-accent font-bold text-sm uppercase tracking-wider">فريق الخبراء</span>
-                    <h2 class="text-4xl md:text-5xl font-bold text-primary mt-2 mb-4">قادة التحرير</h2>
-                    <div class="w-20 h-1 bg-accent mx-auto"></div>
-                    <p class="text-gray-500 mt-4 max-w-2xl mx-auto">نخبة من أفضل الكفاءات الإعلامية والتحليلية في المملكة</p>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-                    <div class="team-card bg-white rounded-2xl overflow-hidden shadow-xl">
-                        <div class="bg-gradient-to-br from-primary to-blue-700 p-8 text-center">
-                            <div class="w-28 h-28 bg-white/20 rounded-full flex items-center justify-center mx-auto border-4 border-white shadow-xl">
-                                <i class="fas fa-user-tie text-5xl text-white"></i>
-                            </div>
-                        </div>
-                        <div class="p-6 text-center">
-                            <h3 class="text-xl font-bold text-gray-800">فهد القحطاني</h3>
-                            <p class="text-accent font-medium mb-2">رئيس التحرير</p>
-                            <p class="text-gray-500 text-sm">خبرة 15 عاماً في الصحافة الاقتصادية، حاصل على جائزة الصحافة العربية</p>
-                            <div class="flex justify-center gap-3 mt-4">
-                                <i class="fab fa-twitter text-gray-400 hover:text-accent cursor-pointer transition"></i>
-                                <i class="fab fa-linkedin-in text-gray-400 hover:text-accent cursor-pointer transition"></i>
-                            </div>
-                        </div>
+          
+            <!-- Stats Section -->
+            <div class="bg-[#0B2B44] rounded-2xl p-6 md:p-8 text-white">
+                <h3 class="text-xl font-bold mb-6 text-center">البوابة الإخبارية بالأرقام</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div>
+                        <div class="text-3xl font-bold">+5M</div>
+                        <p class="text-sm text-blue-200">زائر شهرياً</p>
                     </div>
-                    <div class="team-card bg-white rounded-2xl overflow-hidden shadow-xl">
-                        <div class="bg-gradient-to-br from-primary to-blue-700 p-8 text-center">
-                            <div class="w-28 h-28 bg-white/20 rounded-full flex items-center justify-center mx-auto border-4 border-white shadow-xl">
-                                <i class="fas fa-chart-line text-5xl text-white"></i>
-                            </div>
-                        </div>
-                        <div class="p-6 text-center">
-                            <h3 class="text-xl font-bold text-gray-800">نورة الحارثي</h3>
-                            <p class="text-accent font-medium mb-2">محلل اقتصادي أول</p>
-                            <p class="text-gray-500 text-sm">دكتوراه في الاقتصاد، مستشارة في عدة هيئات حكومية</p>
-                            <div class="flex justify-center gap-3 mt-4">
-                                <i class="fab fa-twitter text-gray-400 hover:text-accent cursor-pointer transition"></i>
-                                <i class="fab fa-linkedin-in text-gray-400 hover:text-accent cursor-pointer transition"></i>
-                            </div>
-                        </div>
+                    <div>
+                        <div class="text-3xl font-bold">+50K</div>
+                        <p class="text-sm text-blue-200">متابع على وسائل التواصل</p>
                     </div>
-                    <div class="team-card bg-white rounded-2xl overflow-hidden shadow-xl">
-                        <div class="bg-gradient-to-br from-primary to-blue-700 p-8 text-center">
-                            <div class="w-28 h-28 bg-white/20 rounded-full flex items-center justify-center mx-auto border-4 border-white shadow-xl">
-                                <i class="fas fa-newspaper text-5xl text-white"></i>
-                            </div>
-                        </div>
-                        <div class="p-6 text-center">
-                            <h3 class="text-xl font-bold text-gray-800">عبدالله الغامدي</h3>
-                            <p class="text-accent font-medium mb-2">صحفي أول - عقارات</p>
-                            <p class="text-gray-500 text-sm">متخصص في شؤون العقارات والإنشاءات، حاصل على جائزة التميز الإعلامي</p>
-                            <div class="flex justify-center gap-3 mt-4">
-                                <i class="fab fa-twitter text-gray-400 hover:text-accent cursor-pointer transition"></i>
-                                <i class="fab fa-linkedin-in text-gray-400 hover:text-accent cursor-pointer transition"></i>
-                            </div>
-                        </div>
+                    <div>
+                        <div class="text-3xl font-bold">+15K</div>
+                        <p class="text-sm text-blue-200">خبر منشور</p>
                     </div>
-                    <div class="team-card bg-white rounded-2xl overflow-hidden shadow-xl">
-                        <div class="bg-gradient-to-br from-primary to-blue-700 p-8 text-center">
-                            <div class="w-28 h-28 bg-white/20 rounded-full flex items-center justify-center mx-auto border-4 border-white shadow-xl">
-                                <i class="fas fa-camera text-5xl text-white"></i>
-                            </div>
-                        </div>
-                        <div class="p-6 text-center">
-                            <h3 class="text-xl font-bold text-gray-800">سارة الزهراني</h3>
-                            <p class="text-accent font-medium mb-2">مديرة التصوير</p>
-                            <p class="text-gray-500 text-sm">مخرجة محترفة، حاصلة على جوائز في الإخراج التلفزيوني</p>
-                            <div class="flex justify-center gap-3 mt-4">
-                                <i class="fab fa-instagram text-gray-400 hover:text-accent cursor-pointer transition"></i>
-                                <i class="fab fa-linkedin-in text-gray-400 hover:text-accent cursor-pointer transition"></i>
-                            </div>
-                        </div>
+                    <div>
+                        <div class="text-3xl font-bold">+25</div>
+                        <p class="text-sm text-blue-200">صحفي ومحرر</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Contact Section - Premium -->
-        <section id="contact" class="py-20 bg-gradient-to-r from-primary to-blue-800 text-white">
-            <div class="container mx-auto px-4 text-center">
-                <div class="max-w-3xl mx-auto">
-                    <div class="w-20 h-20 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-envelope-open-text text-3xl"></i>
-                    </div>
-                    <h2 class="text-4xl md:text-5xl font-bold mb-4">تواصل معنا</h2>
-                    <div class="w-16 h-1 bg-accent mx-auto mb-6"></div>
-                    <p class="text-xl opacity-95 mb-10">نحن هنا للإجابة على استفساراتكم، ونرحب بملاحظاتكم واقتراحاتكم</p>
-                    <div class="flex flex-wrap justify-center gap-4 mb-12">
-                        <a href="#" class="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center hover:bg-accent transition-all duration-300 hover:scale-110"><i class="fab fa-facebook-f text-2xl"></i></a>
-                        <a href="#" class="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center hover:bg-accent transition-all duration-300 hover:scale-110"><i class="fab fa-twitter text-2xl"></i></a>
-                        <a href="#" class="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center hover:bg-accent transition-all duration-300 hover:scale-110"><i class="fab fa-instagram text-2xl"></i></a>
-                        <a href="#" class="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center hover:bg-accent transition-all duration-300 hover:scale-110"><i class="fab fa-youtube text-2xl"></i></a>
-                        <a href="#" class="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center hover:bg-accent transition-all duration-300 hover:scale-110"><i class="fab fa-linkedin-in text-2xl"></i></a>
-                        <a href="#" class="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center hover:bg-accent transition-all duration-300 hover:scale-110"><i class="fab fa-telegram-plane text-2xl"></i></a>
-                    </div>
-                    <div class="flex flex-col md:flex-row justify-center gap-6">
-                        <div class="glass rounded-2xl px-6 py-4 flex items-center justify-center gap-3">
-                            <i class="fas fa-envelope text-2xl text-accent"></i>
-                            <span class="text-lg">info@saudiprojects.com</span>
-                        </div>
-                        <div class="glass rounded-2xl px-6 py-4 flex items-center justify-center gap-3">
-                            <i class="fas fa-phone text-2xl text-accent"></i>
-                            <span class="text-lg">+966 12 345 6789</span>
-                        </div>
-                        <div class="glass rounded-2xl px-6 py-4 flex items-center justify-center gap-3">
-                            <i class="fas fa-map-marker-alt text-2xl text-accent"></i>
-                            <span class="text-lg">الرياض، المملكة العربية </span>
-                        </div>
-                    </div>
-                </div>
+        <!-- Left Sidebar (إعلانات + الأكثر قراءة) -->
+        <div class="lg:col-span-4 space-y-6">
+            <!-- Ad Space 1 -->
+            <div class="ad-placeholder rounded-xl p-5 text-center border border-gray-200 shadow-sm">
+                <i class="fas fa-ad text-3xl text-gray-400 mb-2 block"></i>
+                <span class="text-xs text-gray-500 uppercase tracking-wider">مساحة إعلانية</span>
+                <div class="mt-3 h-32 bg-white/60 rounded-lg flex items-center justify-center text-gray-400 text-sm border border-dashed">إعلانك هنا</div>
             </div>
-        </section>
-    </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white pt-16 pb-8">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-                <div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">بوابة<span class="text-accent">المشاريع</span> </h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">المنصة الأولى المتخصصة في رصد ومتابعة أخبار المشاريع الكبرى في المملكة العربية .</p>
+            <!-- About Us Quick Info -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-5">
+                <div class="flex items-center gap-2 border-b border-gray-200 pb-3 mb-4">
+                    <i class="fas fa-info-circle text-accent text-xl"></i>
+                    <h3 class="font-bold text-lg text-gray-800">معلومات سريعة</h3>
                 </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-white">روابط سريعة</h4>
-                    <ul class="text-gray-400 space-y-2 text-sm">
-                        <li><a href="index.html" class="hover:text-white transition flex items-center gap-2"><i class="fas fa-chevron-left text-xs"></i> الرئيسية</a></li>
-                        <li><a href="#" class="hover:text-white transition flex items-center gap-2"><i class="fas fa-chevron-left text-xs"></i> من نحن</a></li>
-                        <li><a href="#" class="hover:text-white transition flex items-center gap-2"><i class="fas fa-chevron-left text-xs"></i> اتصل بنا</a></li>
-                        <li><a href="#" class="hover:text-white transition flex items-center gap-2"><i class="fas fa-chevron-left text-xs"></i> سياسة الخصوصية</a></li>
-                    </ul>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex justify-between"><span class="text-gray-500">التأسيس:</span><span class="font-semibold">2020 م</span></li>
+                    <li class="flex justify-between"><span class="text-gray-500">المقر الرئيسي:</span><span class="font-semibold">الرياض، المملكة العربية السعودية</span></li>
+                    <li class="flex justify-between"><span class="text-gray-500">اللغات:</span><span class="font-semibold">العربية (قريباً الإنجليزية)</span></li>
+                    <li class="flex justify-between"><span class="text-gray-500">الترخيص:</span><span class="font-semibold">وزارة الإعلام السعودية</span></li>
+                    <li class="flex justify-between"><span class="text-gray-500">رقم الاتصال:</span><span class="font-semibold text-primary">+966 12 345 6789</span></li>
+                    <li class="flex justify-between"><span class="text-gray-500">البريد الإلكتروني:</span><span class="font-semibold text-primary">info@albawabh.com</span></li>
+                </ul>
+            </div>
+
+            <!-- Most Read in About Section -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-5 sticky top-28">
+                <div class="flex items-center gap-2 border-b border-gray-200 pb-3 mb-4">
+                    <i class="fas fa-fire-flame text-accent text-xl"></i>
+                    <h3 class="font-bold text-lg text-gray-800">الأكثر قراءة اليوم</h3>
                 </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-white">الأقسام</h4>
-                    <ul class="text-gray-400 space-y-2 text-sm">
-                        <li><a href="real-estate.html" class="hover:text-white transition">عقارات</a></li>
-                        <li><a href="construction.html" class="hover:text-white transition">مقاولات</a></li>
-                        <li><a href="sports.html" class="hover:text-white transition">رياضة</a></li>
-                        <li><a href="reports.html" class="hover:text-white transition">تقارير اقتصادية</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-white">النشرة البريدية</h4>
-                    <p class="text-gray-400 text-sm mb-3">اشترك ليصلك جديد الأخبار</p>
-                    <form class="flex flex-col gap-2">
-                        <input type="email" placeholder="بريدك الإلكتروني" class="bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-accent">
-                        <button class="bg-accent hover:bg-red-700 transition rounded-lg px-4 py-2 text-sm font-bold">اشترك</button>
-                    </form>
+                <div class="space-y-3">
+                    <div class="flex gap-3 items-start cursor-pointer group">
+                        <div class="text-accent font-bold text-lg w-6">1</div>
+                        <div>
+                            <h4 class="font-semibold text-sm group-hover:text-primary transition">مدينة الملك سلمان الرياضية العملاقة تفتح أبوابها رسمياً</h4>
+                            <div class="flex items-center gap-2 text-xs text-gray-400 mt-1"><span><i class="far fa-eye"></i> 12.5K</span><span>قبل ساعة</span></div>
+                        </div>
+                    </div>
+                    <div class="flex gap-3 items-start cursor-pointer group">
+                        <div class="text-accent font-bold text-lg w-6">2</div>
+                        <div>
+                            <h4 class="font-semibold text-sm group-hover:text-primary transition">إعلان الفائزين بجائزة مكة للتميز في قطاع المقاولات</h4>
+                            <div class="flex items-center gap-2 text-xs text-gray-400 mt-1"><span><i class="far fa-eye"></i> 8.2K</span><span>قبل 3 ساعات</span></div>
+                        </div>
+                    </div>
+                    <div class="flex gap-3 items-start cursor-pointer group">
+                        <div class="text-accent font-bold text-lg w-6">3</div>
+                        <div>
+                            <h4 class="font-semibold text-sm group-hover:text-primary transition">انطلاق مؤتمر الإسكان 2026 بحضور قادة القطاع العقاري</h4>
+                            <div class="flex items-center gap-2 text-xs text-gray-400 mt-1"><span><i class="far fa-eye"></i> 6.7K</span><span>قبل 5 ساعات</span></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-                <p>&copy; 2026 البوابة الإخبارية . جميع الحقوق محفوظة.</p>
+
+            <!-- Ad Space 2 -->
+            <div class="ad-placeholder rounded-xl p-4 text-center border border-gray-200">
+                <i class="fas fa-trophy text-gray-400 mb-1"></i>
+                <p class="text-xs text-gray-500">رعاة البوابة الإخبارية</p>
+                <div class="mt-2 h-28 bg-gray-100 rounded flex items-center justify-center text-gray-400 text-xs">شريكك الإعلامي الأول</div>
+            </div>
+        </div>
+    </div>
+</main>
+
+  <!-- نموذج للفوتر المطور -->
+    <footer class="footer-bg text-white mt-12">
+        <!-- القسم العلوي مع الخريطة والشعار -->
+        <div class="container mx-auto px-4 md:px-6 py-12 md:py-16">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                
+                <!-- العمود الأول: الشعار والمعلومات -->
+                <div class="lg:col-span-4 text-center lg:text-right">
+                    <div class="flex justify-center lg:justify-start mb-6">
+                        <div class="bg-white/10 backdrop-blur-sm p-4 rounded-2xl inline-block border border-white/20">
+                            <div class="text-5xl font-bold text-white">
+                                <span class="text-red-500">البوابة</span>
+                                <span>الإخبارية</span>
+                            </div>
+                            
+                            <p class="text-sm text-gray-300 mt-2 text-center"> الإخبارية</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        المنصة الأولى المتخصصة في رصد ومتابعة أخبار المشاريع الكبرى في المملكة العربية ، نقدم لكم أحدث الأخبار والتقارير الحصرية لحظة بلحظة.
+                    </p>
+                    <div class="flex justify-center lg:justify-start gap-3 mb-6">
+                        <span class="text-xs bg-white/10 px-3 py-1 rounded-full">✓ دقة في النقل</span>
+                        <span class="text-xs bg-white/10 px-3 py-1 rounded-full">✓ سرعة في التغطية</span>
+                        <span class="text-xs bg-white/10 px-3 py-1 rounded-full">✓ مصداقية عالية</span>
+                    </div>
+                </div>
+
+                <!-- العمود الثاني: خريطة الموقع (الأقسام الرئيسية) -->
+                <div class="lg:col-span-5">
+                    <h3 class="text-red-500 font-bold text-2xl mb-6 text-center lg:text-right relative inline-block lg:block">
+                        خريطة الموقع
+                        <div class="absolute -bottom-2 right-0 w-12 h-0.5 bg-red-500 rounded-full lg:right-auto lg:left-0"></div>
+                    </h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                        <!-- العمود الأول -->
+                        <div>
+                            <h4 class="text-white font-semibold mb-3 border-r-2 border-red-500 pr-3">الأخبار</h4>
+                            <ul class="space-y-2 text-sm">
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">أخبار عاجلة</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">أخبار اليوم</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">حوادث</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">سياسة وتقارير</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">عرب وعالم</a></li>
+                            </ul>
+                        </div>
+                        <!-- العمود الثاني -->
+                        <div>
+                            <h4 class="text-white font-semibold mb-3 border-r-2 border-red-500 pr-3">القطاعات</h4>
+                            <ul class="space-y-2 text-sm">
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">عقارات</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">مقاولات وإنشاءات</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">أمن وسلامة</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">تشطيبات وديكورات</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">تقنيات اقتصادية</a></li>
+                            </ul>
+                        </div>
+                        <!-- العمود الثالث -->
+                        <div>
+                            <h4 class="text-white font-semibold mb-3 border-r-2 border-red-500 pr-3">منوعات</h4>
+                            <ul class="space-y-2 text-sm">
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">رياضة</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">تكنولوجيا</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">صحة ومنوعات</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">فن ومشاهير</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">فيديوهات</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- العمود الثالث: التواصل والنشرة البريدية -->
+                <div class="lg:col-span-3">
+                    <h3 class="text-red-500 font-bold text-2xl mb-6 text-center lg:text-right">
+                        تواصل معنا
+                    </h3>
+                    
+                    <!-- وسائل التواصل الاجتماعي -->
+                    <div class="flex justify-center lg:justify-start gap-3 mb-8">
+                        <a href="#" class="social-icon w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-500 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-500 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-500 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-500 transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-icon w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-500 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-icon w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-red-500 transition">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                    </div>
+
+                    <!-- النشرة البريدية -->
+                    <div class="bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10">
+                        <h4 class="font-bold mb-3 text-center lg:text-right">📧 النشرة الإخبارية</h4>
+                        <p class="text-xs text-gray-300 mb-3 text-center lg:text-right">اشترك ليصلك أحدث الأخبار مباشرة</p>
+                        <form class="flex flex-col gap-2">
+                            <input type="email" placeholder="بريدك الإلكتروني" class="newsletter-input bg-white/20 rounded-lg px-4 py-2 text-sm text-white placeholder:text-gray-400 border border-white/20 focus:border-red-500 transition">
+                            <button class="bg-red-500 hover:bg-red-600 transition rounded-lg px-4 py-2 text-sm font-bold">
+                                اشترك الآن
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- روابط التطبيقات (اختياري) -->
+            <div class="mt-12 pt-8 border-t border-white/10">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div class="text-center md:text-right">
+                        <p class="text-sm text-gray-300">حمّل تطبيقنا على هاتفك</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="#" class="app-btn flex items-center gap-2 bg-white/10 hover:bg-white/20 rounded-lg px-4 py-2 transition">
+                            <i class="fab fa-google-play text-xl"></i>
+                            <span class="text-sm">Google Play</span>
+                        </a>
+                        <a href="#" class="app-btn flex items-center gap-2 bg-white/10 hover:bg-white/20 rounded-lg px-4 py-2 transition">
+                            <i class="fab fa-apple text-xl"></i>
+                            <span class="text-sm">App Store</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- الشريط السفلي (حقوق النشر والروابط) -->
+        <div class="border-t border-white/10 bg-black/20">
+            <div class="container mx-auto px-4 md:px-6 py-5">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-300">
+                    <div class="text-center md:text-right order-2 md:order-1">
+                        © <span id="footer-year"></span> 
+                        البوابة الإخبارية  - جميع الحقوق محفوظة
+                    </div>
+                    <div class="flex gap-4 order-1 md:order-2">
+                        <a href="#" class="hover:text-red-400 transition text-xs">الرئيسية</a>
+                        <span class="text-white/20">|</span>
+                        <a href="#" class="hover:text-red-400 transition text-xs">سياسة الخصوصية</a>
+                        <span class="text-white/20">|</span>
+                        <a href="#" class="hover:text-red-400 transition text-xs">اتصل بنا</a>
+                        <span class="text-white/20">|</span>
+                        <a href="#" class="hover:text-red-400 transition text-xs">شروط الاستخدام</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Scroll to Top -->
-    <button id="scroll-top" class="fixed bottom-6 left-6 bg-primary text-white w-12 h-12 rounded-full shadow-xl hidden items-center justify-center hover:bg-accent transition-all duration-300 hover:scale-110 z-50">
-        <i class="fas fa-chevron-up text-lg"></i>
-    </button>
-
     <script>
-        // Mobile Menu
-        const toggleBtn = document.getElementById('mobile-menu-toggle');
-        const closeBtn = document.getElementById('close-menu');
-        const mobileMenu = document.getElementById('mobile-menu');
+        // تحديث السنة تلقائياً
+        document.getElementById("footer-year").textContent = new Date().getFullYear();
         
-        if (toggleBtn && mobileMenu) {
-            toggleBtn.addEventListener('click', () => {
-                mobileMenu.classList.remove('translate-x-full');
-                mobileMenu.classList.add('translate-x-0');
-                document.body.style.overflow = 'hidden';
+        // تأثيرات إضافية (اختيارية)
+        document.querySelectorAll('.footer-link').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(-5px)';
             });
-            if (closeBtn) {
-                closeBtn.addEventListener('click', () => {
-                    mobileMenu.classList.remove('translate-x-0');
-                    mobileMenu.classList.add('translate-x-full');
-                    document.body.style.overflow = '';
-                });
-            }
-            mobileMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.remove('translate-x-0');
-                    mobileMenu.classList.add('translate-x-full');
-                    document.body.style.overflow = '';
-                });
-            });
-        }
-        
-        // Scroll to Top
-        const scrollBtn = document.getElementById('scroll-top');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                scrollBtn.classList.remove('hidden');
-                scrollBtn.classList.add('flex');
-            } else {
-                scrollBtn.classList.add('hidden');
-                scrollBtn.classList.remove('flex');
-            }
-        });
-        scrollBtn?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-        
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href !== '#' && href !== '' && href !== '#contact') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                }
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0)';
             });
         });
     </script>
+        <style>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        .footer-bg {
+            background: linear-gradient(135deg, #0B2B44 0%, #062035 100%);
+        }
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .footer-link {
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+        .footer-link:hover {
+            transform: translateX(-5px);
+            color: #E53E3E !important;
+        }
+        .newsletter-input {
+            transition: all 0.3s ease;
+        }
+        .newsletter-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.3);
+        }
+        .app-btn {
+            transition: all 0.3s ease;
+        }
+        .app-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .border-glow {
+            border-image: linear-gradient(135deg, #E53E3E, #0B3B66) 1;
+        }
+    </style>
+
+
+<style>
+    .footer-bg { background: linear-gradient(135deg, #0B2B44 0%, #062035 100%); }
+    .social-icon { transition: all 0.3s ease; }
+    .social-icon:hover { transform: translateY(-5px) scale(1.1); }
+</style>
+
+<script>
+    document.getElementById("footer-year").textContent = new Date().getFullYear();
+    document.getElementById('current-date').innerText = new Date().toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' });
+
+    // Mobile Menu
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-nav-menu');
+    let isOpen = false;
+    if (toggleBtn && mobileMenu) {
+        toggleBtn.addEventListener('click', () => {
+            isOpen = !isOpen;
+            if (isOpen) {
+                mobileMenu.classList.remove('mobile-nav-closed');
+                mobileMenu.classList.add('mobile-nav-open');
+                toggleBtn.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                mobileMenu.classList.remove('mobile-nav-open');
+                mobileMenu.classList.add('mobile-nav-closed');
+                toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+    }
+</script>
 </body>
 </html>
