@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>البوابة الإخبارية  | مقاولات وإنشاءات</title>
+    <title>بوابة الاخبار  | مقاولات وإنشاءات</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -57,46 +57,60 @@
                 </div>
             </div>
             <!-- Main Header -->
-            <div class="flex justify-between items-center py-5">
-               <div class="flex gap-3">
-    <!-- Facebook -->
-    <a href="https://www.facebook.com/newspoortal.1/" class="w-9 h-9 bg-blue-700 text-white rounded-full flex items-center justify-center hover:scale-110 transition transform">
-        <i class="fab fa-facebook-f"></i>
-    </a>
+           <div class="flex flex-col md:flex-row justify-between items-center gap-4 py-5">
 
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/news.portal.1/" class="w-9 h-9 bg-gradient-to-tr from-pink-500 to-orange-500 text-white rounded-full flex items-center justify-center hover:scale-110 transition transform">
-        <i class="fab fa-instagram"></i>
-    </a>
+    <!-- Social Media -->
+    <div class="flex justify-center gap-3 order-2 md:order-1">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/newspoortal.1/"
+            class="w-9 h-9 bg-blue-700 text-white rounded-full flex items-center justify-center hover:scale-110 transition transform">
+            <i class="fab fa-facebook-f"></i>
+        </a>
 
-    <!-- TikTok -->
-    <a href="https://www.tiktok.com/@news.portal.1?_r=1&_t=ZS-972bV61teVO" class="w-9 h-9 bg-black text-white rounded-full flex items-center justify-center hover:scale-110 transition transform">
-        <i class="fab fa-tiktok"></i>
-    </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/news.portal.1/"
+            class="w-9 h-9 bg-gradient-to-tr from-pink-500 to-orange-500 text-white rounded-full flex items-center justify-center hover:scale-110 transition transform">
+            <i class="fab fa-instagram"></i>
+        </a>
 
-    <!-- Twitter X -->
-    <a href="https://x.com/news_portal1" class="w-9 h-9 bg-slate-800 text-white rounded-full flex items-center justify-center hover:scale-110 transition transform">
-        <i class="fab fa-x-twitter"></i>
-    </a>
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@news.portal.1?_r=1&_t=ZS-972bV61teVO"
+            class="w-9 h-9 bg-black text-white rounded-full flex items-center justify-center hover:scale-110 transition transform">
+            <i class="fab fa-tiktok"></i>
+        </a>
 
-    <!-- Snapchat -->
-    <a href="https://www.snapchat.com/add/news_portal1?share_id=blPkDEBy5ls&locale=ar-EG" class="w-9 h-9 bg-yellow-400 text-black rounded-full flex items-center justify-center hover:scale-110 transition transform">
-        <i class="fab fa-snapchat-ghost"></i>
-    </a>
+        <!-- Twitter X -->
+        <a href="https://x.com/news_portal1"
+            class="w-9 h-9 bg-slate-800 text-white rounded-full flex items-center justify-center hover:scale-110 transition transform">
+            <i class="fab fa-x-twitter"></i>
+        </a>
+
+        <!-- Snapchat -->
+        <a href="https://www.snapchat.com/add/news_portal1?share_id=blPkDEBy5ls&locale=ar-EG"
+            class="w-9 h-9 bg-yellow-400 text-black rounded-full flex items-center justify-center hover:scale-110 transition transform">
+            <i class="fab fa-snapchat-ghost"></i>
+        </a>
+    </div>
+
+    <!-- Logo -->
+    <div class="text-center order-1 md:order-2">
+        <a href="/" class="inline-block">
+            <img src="./assets/img/Asset - شعار بوابة الاخبار.png"
+                alt="لوجو الموقع"
+                class="mx-auto h-20 md:h-24 w-auto">
+        </a>
+    </div>
+
+    <!-- Search -->
+    <div class="relative hidden md:block order-3">
+        <input type="text"
+            placeholder="بحث..."
+            class="border rounded-full py-2 px-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-primary w-64">
+
+        <i class="fas fa-search absolute right-3 top-3 text-gray-400"></i>
+    </div>
+
 </div>
-                <div class="text-center">
-                    <h1 class="text-3xl md:text-4xl font-extrabold text-primary tracking-tight">
-                        البوابة الإخبارية 
-                    </h1>
-                    <p class="text-sm text-gray-500 mt-1 font-medium">
-                        الاخبار لحظة بلحظة
-                    </p>
-                </div>
-                <div class="relative hidden md:block">
-                    <input type="text" placeholder="بحث..." class="border rounded-full py-2 px-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-primary w-64">
-                    <i class="fas fa-search absolute right-3 top-3 text-gray-400"></i>
-                </div>
-            </div>
         </div>
     </header>
 
@@ -344,7 +358,7 @@
                 <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-300">
                     <div class="text-center md:text-right order-2 md:order-1">
                         © <span id="footer-year"></span> 
-                        البوابة الإخبارية  - جميع الحقوق محفوظة
+                        بوابة الاخبار  - جميع الحقوق محفوظة
                     </div>
                     <div class="flex gap-4 order-1 md:order-2">
                         <a href="#" class="hover:text-red-400 transition text-xs">الرئيسية</a>
