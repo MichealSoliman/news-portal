@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="manifest" href="/site.webmanifest">
     <style>
         * { font-family: 'Cairo', sans-serif; }
         body { background-color: #f8fafc; }
@@ -18,7 +19,7 @@
         .text-accent { color: #E53E3E; }
         .border-accent { border-color: #E53E3E; }
         
-        /* News Ticker Animation */
+        /* news Ticker Animation */
         .news-ticker-container { overflow: hidden; white-space: nowrap; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-bottom: 3px solid #E53E3E; }
         .ticker-content { display: inline-block; animation: ticker 45s linear infinite; }
         .ticker-content span { transition: all 0.3s ease; }
@@ -125,7 +126,7 @@
             <div class="flex justify-between items-center py-2 text-sm text-gray-600 border-b">
                 <div id="current-date" class="font-medium"></div>
                 <div class="flex items-center gap-5">
-                    <a href="#" class="hover:text-primary transition">الرئيسية</a>
+                    <a href="/" class="hover:text-primary transition">الرئيسية</a>
                     <a href="#" class="hover:text-primary transition">سياسة الخصوصية</a>
                     <a href="mailto:info@news-portal1.com" class="hover:text-primary transition">
                         اتصل بنا
@@ -195,15 +196,15 @@
     <nav class="bg-primary  text-white  top-[140px] md:top-[150px] z-40 shadow-lg hidden md:block">
         <div class="container mx-auto px-4">
             <ul class="flex justify-center space-x-reverse space-x-8 py-3 text-sm font-semibold">
-                <li><a href="index.html" class="text-amber-200 border-b-2 border-amber-300 pb-1 transition">الرئيسية</a></li>
-                <li><a href="breaking-news.html" class="hover:text-amber-200 transition">أخبار عاجلة</a></li>
-                <li><a href="daily-news.html" class="hover:text-amber-200 transition">أخبار اليوم</a></li>
-                <li><a href="real-estate.html" class="hover:text-amber-200 transition">عقارات</a></li>
-                <li><a href="construction.html" class="hover:text-amber-200 transition">مقاولات</a></li>
-                <li><a href="security-systems.html" class="hover:text-amber-200 transition">أمن وسلامة</a></li>
-                <li><a href="interior-design.html" class="hover:text-amber-200 transition">تشطيبات</a></li>
-                <li><a href="sports.html" class="hover:text-amber-200 transition">رياضة</a></li>
-                <li><a href="reports-analysis.html" class="hover:text-amber-200 transition">تقارير</a></li>
+                <li><a href="../index.html" class="text-amber-200 border-b-2 border-amber-300 pb-1 transition">الرئيسية</a></li>
+                <li><a href="../breaking-news/" class="hover:text-amber-200 transition">أخبار عاجلة</a></li>
+                <li><a href="../daily-news/" class="hover:text-amber-200 transition">أخبار اليوم</a></li>
+                <li><a href="../real-estate/" class="hover:text-amber-200 transition">عقارات</a></li>
+                <li><a href="../construction/" class="hover:text-amber-200 transition">مقاولات</a></li>
+                <li><a href="../security-systems/" class="hover:text-amber-200 transition">أمن وسلامة</a></li>
+                <li><a href="../interior-design/" class="hover:text-amber-200 transition">تشطيبات</a></li>
+                <li><a href="../sports/" class="hover:text-amber-200 transition">رياضة</a></li>
+                <li><a href="../reports-analysis/" class="hover:text-amber-200 transition">تقارير</a></li>
                
             </ul>
         </div>
@@ -218,22 +219,22 @@
     </div>
     <div id="mobile-nav-menu" class="md:hidden bg-primary  top-[300px] shadow-xl transition-all duration-300 ease-in-out overflow-hidden z-50 mobile-nav-closed">
         <ul class="flex flex-col py-3 text-sm font-semibold">
-            <li><a href="index.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🏠 الرئيسية</a></li>
-            <li><a href="breaking-news.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">⚡ أخبار عاجلة</a></li>
-            <li><a href="daily-news.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">📰 أخبار اليوم</a></li>
-            <li><a href="real-estate.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🏢 عقارات</a></li>
-            <li><a href="construction.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🏗️ مقاولات</a></li>
-            <li><a href="security-systems.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🛡️ أمن وسلامة</a></li>
-            <li><a href="interior-design.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🎨 تشطيبات</a></li>
-            <li><a href="sports.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">⚽ رياضة</a></li>
-            <li><a href="reports-analysis.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">📊 تقارير</a></li>
+            <li><a href="../index.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🏠 الرئيسية</a></li>
+            <li><a href="../breaking-news/" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">⚡ أخبار عاجلة</a></li>
+            <li><a href="../daily-news/" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">📰 أخبار اليوم</a></li>
+            <li><a href="../real-estate/" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🏢 عقارات</a></li>
+            <li><a href="../construction/" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🏗️ مقاولات</a></li>
+            <li><a href="../security-systems/" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🛡️ أمن وسلامة</a></li>
+            <li><a href="../interior-design/" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🎨 تشطيبات</a></li>
+            <li><a href="../sports/" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">⚽ رياضة</a></li>
+            <li><a href="../reports-analysis/" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">📊 تقارير</a></li>
            
         </ul>
     </div>
 </div>
 
 
-    <!-- Breaking News Ticker -->
+    <!-- Breaking news Ticker -->
     <div class="news-ticker-container py-2">
         <div class="container mx-auto px-4 flex items-center">
             <div class="bg-accent text-white px-5 py-1.5 text-sm font-bold z-10 whitespace-nowrap ml-4 rounded-full shadow-md">عاجل</div>
@@ -249,10 +250,10 @@
 
     <main class="container mx-auto px-4 py-8">
         
-        <!-- Hero Section - Featured News -->
+        <!-- Hero Section - Featured news -->
         <section class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
             <div class="lg:col-span-2 relative group overflow-hidden rounded-2xl shadow-xl h-[420px] lg:h-[520px]">
-                <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" alt="Main News">
+                <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1200&q=80" class="w-full h-full object-cover transition duration-700 group-hover:scale-105" alt="Main news">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6 md:p-8 text-white">
                     <span class="bg-accent px-4 py-1.5 text-xs font-bold w-max mb-3 rounded-full shadow-lg">عقارات</span>
                     <h2 class="text-2xl md:text-4xl font-bold mb-3 leading-tight">
@@ -270,7 +271,7 @@
             </div>
             <div class="grid grid-cols-1 gap-4">
                 <div class="flex gap-4 bg-white p-3 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group cursor-pointer border border-gray-100">
-                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=120&h=100&q=80" class="w-24 h-24 object-cover rounded-lg" alt="News">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=120&h=100&q=80" class="w-24 h-24 object-cover rounded-lg" alt="news">
                     <div>
                         <span class="bg-primary/10 text-primary text-xs font-bold px-2 py-0.5 rounded-full">مقاولات</span>
                         <h3 class="text-sm font-bold mt-2 line-clamp-2 group-hover:text-primary transition"><a href="#">تقنيات البناء الحديثة تسرع وتيرة الإنجاز في مشاريع الإسكان</a></h3>
@@ -278,7 +279,7 @@
                     </div>
                 </div>
                 <div class="flex gap-4 bg-white p-3 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group cursor-pointer border border-gray-100">
-                    <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=120&h=100&q=80" class="w-24 h-24 object-cover rounded-lg" alt="News">
+                    <img src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=120&h=100&q=80" class="w-24 h-24 object-cover rounded-lg" alt="news">
                     <div>
                         <span class="bg-primary/10 text-primary text-xs font-bold px-2 py-0.5 rounded-full">أمن وسلامة</span>
                         <h3 class="text-sm font-bold mt-2 line-clamp-2 group-hover:text-primary transition"><a href="#">معايير جديدة للأمن والسلامة في المنشآت الحيوية بالمملكة</a></h3>
@@ -286,7 +287,7 @@
                     </div>
                 </div>
                 <div class="flex gap-4 bg-white p-3 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group cursor-pointer border border-gray-100">
-                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=120&h=100&q=80" class="w-24 h-24 object-cover rounded-lg" alt="News">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=120&h=100&q=80" class="w-24 h-24 object-cover rounded-lg" alt="news">
                     <div>
                         <span class="bg-primary/10 text-primary text-xs font-bold px-2 py-0.5 rounded-full">تشطيبات</span>
                         <h3 class="text-sm font-bold mt-2 line-clamp-2 group-hover:text-primary transition"><a href="#">أحدث صيحات التصميم الداخلي للمكاتب العصرية في 2026</a></h3>
@@ -294,7 +295,7 @@
                     </div>
                 </div>
                 <div class="flex gap-4 bg-white p-3 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 group cursor-pointer border border-gray-100">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=120&h=100&q=80" class="w-24 h-24 object-cover rounded-lg" alt="News">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=120&h=100&q=80" class="w-24 h-24 object-cover rounded-lg" alt="news">
                     <div>
                         <span class="bg-primary/10 text-primary text-xs font-bold px-2 py-0.5 rounded-full">تقارير</span>
                         <h3 class="text-sm font-bold mt-2 line-clamp-2 group-hover:text-primary transition"><a href="#">تقرير: الاقتصاد السعودي يحقق قفزات نوعية في القطاع غير النفطي</a></h3>
@@ -304,7 +305,7 @@
             </div>
         </section>
 
-        <!-- Breaking News Ticker داخل المحتوى -->
+        <!-- Breaking news Ticker داخل المحتوى -->
         <div class="bg-gradient-to-r from-red-600 to-red-700 rounded-xl p-3 mb-8 shadow-lg">
             <div class="flex items-center gap-3 flex-wrap">
                 <div class="bg-white text-red-600 px-4 py-1 rounded-full text-sm font-bold animate-pulse">
@@ -333,7 +334,7 @@
                             <div class="w-2 h-2 bg-accent rounded-full animate-ping"></div>
                             <h2 class="text-2xl font-bold text-primary">أخبار عاجلة</h2>
                         </div>
-                        <a href="breaking-news.html" class="text-sm text-gray-500 hover:text-primary transition">مشاهدة الكل <i class="fas fa-chevron-left mr-1"></i></a>
+                        <a href="../breaking-news/" class="text-sm text-gray-500 hover:text-primary transition">مشاهدة الكل <i class="fas fa-chevron-left mr-1"></i></a>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="bg-gradient-to-r from-red-50 to-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition group border border-red-100">
@@ -351,15 +352,15 @@
                     </div>
                 </section>
 
-                <!-- ====== أخبار اليوم (Latest News) ====== -->
+                <!-- ====== أخبار اليوم (Latest news) ====== -->
                 <section class="mb-12">
                     <div class="flex justify-between items-center border-b-2 border-primary mb-6 pb-2">
                         <h2 class="text-2xl font-bold text-primary">📰 أخبار اليوم</h2>
-                        <a href="daily-news.html" class="text-sm text-gray-500 hover:text-primary transition">مشاهدة الكل <i class="fas fa-chevron-left mr-1"></i></a>
+                        <a href="../daily-news/" class="text-sm text-gray-500 hover:text-primary transition">مشاهدة الكل <i class="fas fa-chevron-left mr-1"></i></a>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div class="bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-xl transition-all duration-300 group">
-                            <div class="overflow-hidden h-48"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="News"></div>
+                            <div class="overflow-hidden h-48"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="news"></div>
                             <div class="p-4">
                                 <span class="text-xs text-gray-400"><i class="far fa-calendar-alt ml-1"></i> 6 يونيو 2026</span>
                                 <h3 class="font-bold mt-2 mb-2 line-clamp-2"><a href="#" class="hover:text-primary transition">بدء تنفيذ المرحلة الثالثة من مشروع تطوير الطرق الدائرية في جدة</a></h3>
@@ -367,7 +368,7 @@
                             </div>
                         </div>
                         <div class="bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-xl transition-all duration-300 group">
-                            <div class="overflow-hidden h-48"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="News"></div>
+                            <div class="overflow-hidden h-48"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="news"></div>
                             <div class="p-4">
                                 <span class="text-xs text-gray-400"><i class="far fa-calendar-alt ml-1"></i> 6 يونيو 2026</span>
                                 <h3 class="font-bold mt-2 mb-2 line-clamp-2"><a href="#" class="hover:text-primary transition">صندوق الاستثمارات العامة يطلق شركة جديدة لإدارة المرافق</a></h3>
@@ -375,7 +376,7 @@
                             </div>
                         </div>
                         <div class="bg-white rounded-xl shadow-sm border overflow-hidden hover:shadow-xl transition-all duration-300 group">
-                            <div class="overflow-hidden h-48"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="News"></div>
+                            <div class="overflow-hidden h-48"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="news"></div>
                             <div class="p-4">
                                 <span class="text-xs text-gray-400"><i class="far fa-calendar-alt ml-1"></i> 5 يونيو 2026</span>
                                 <h3 class="font-bold mt-2 mb-2 line-clamp-2"><a href="#" class="hover:text-primary transition">ارتفاع الطلب على الوحدات السكنية في المنطقة الشرقية</a></h3>
@@ -389,7 +390,7 @@
                 <section class="mb-12">
                     <div class="flex justify-between items-center border-b-2 border-primary mb-6 pb-2">
                         <h2 class="text-2xl font-bold text-primary">🏢 عقارات</h2>
-                        <a href="real-estate.html" class="text-sm text-gray-500 hover:text-primary transition">عرض المزيد <i class="fas fa-chevron-left mr-1"></i></a>
+                        <a href="../real-estate/" class="text-sm text-gray-500 hover:text-primary transition">عرض المزيد <i class="fas fa-chevron-left mr-1"></i></a>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="relative rounded-xl overflow-hidden h-72 group shadow-lg">
@@ -402,15 +403,15 @@
                         </div>
                         <div class="space-y-4">
                             <div class="flex gap-4 items-center group cursor-pointer p-2 rounded-lg hover:bg-gray-50 transition">
-                                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=100&h=80&q=80" class="w-20 h-20 object-cover rounded-lg" alt="News">
+                                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=100&h=80&q=80" class="w-20 h-20 object-cover rounded-lg" alt="news">
                                 <div><h4 class="font-bold text-sm group-hover:text-primary transition"><a href="#">أسعار العقارات في مكة المكرمة تسجل استقراراً مع اقتراب موسم الحج</a></h4><span class="text-xs text-gray-400"><i class="far fa-eye ml-1"></i> 3.2k مشاهدة</span></div>
                             </div>
                             <div class="flex gap-4 items-center group cursor-pointer p-2 rounded-lg hover:bg-gray-50 transition">
-                                <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=100&h=80&q=80" class="w-20 h-20 object-cover rounded-lg" alt="News">
+                                <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?auto=format&fit=crop&w=100&h=80&q=80" class="w-20 h-20 object-cover rounded-lg" alt="news">
                                 <div><h4 class="font-bold text-sm group-hover:text-primary transition"><a href="#">إعفاء المواطنين من ضريبة التصرفات العقارية للمسكن الأول</a></h4><span class="text-xs text-gray-400"><i class="far fa-eye ml-1"></i> 5.1k مشاهدة</span></div>
                             </div>
                             <div class="flex gap-4 items-center group cursor-pointer p-2 rounded-lg hover:bg-gray-50 transition">
-                                <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=100&h=80&q=80" class="w-20 h-20 object-cover rounded-lg" alt="News">
+                                <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=100&h=80&q=80" class="w-20 h-20 object-cover rounded-lg" alt="news">
                                 <div><h4 class="font-bold text-sm group-hover:text-primary transition"><a href="#">فرص استثمارية كبرى في المخططات الجديدة شمال الرياض</a></h4><span class="text-xs text-gray-400"><i class="far fa-eye ml-1"></i> 4.5k مشاهدة</span></div>
                             </div>
                         </div>
@@ -425,7 +426,7 @@
                             <h2 class="text-2xl md:text-3xl font-bold text-primary">🏗️ مقاولات وإنشاءات</h2>
                             <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">أخبار حصرية</span>
                         </div>
-                        <a href="construction.html" class="group flex items-center gap-2 text-sm text-gray-500 hover:text-primary transition-all duration-300 hover:translate-x-1">
+                        <a href="../construction/" class="group flex items-center gap-2 text-sm text-gray-500 hover:text-primary transition-all duration-300 hover:translate-x-1">
                             <span>عرض المزيد</span>
                             <i class="fas fa-chevron-left text-xs group-hover:translate-x-1 transition"></i>
                         </a>
@@ -531,7 +532,7 @@
                                     <p class="text-xs text-[#0B3B66]">أحدث التقنيات والحلول الأمنية المتطورة</p>
                                 </div>
                             </div>
-                            <a href="security-systems.html" class="group flex items-center gap-2 text-sm text-white/80 hover:text-white transition-all duration-300">
+                            <a href="../security-systems/" class="group flex items-center gap-2 text-sm text-white/80 hover:text-white transition-all duration-300">
                                 <span>عرض المزيد</span>
                                 <i class="fas fa-chevron-left text-xs group-hover:-translate-x-1 transition"></i>
                             </a>
@@ -676,7 +677,7 @@
                             <h2 class="text-2xl md:text-3xl font-bold text-primary">🎨 تشطيبات وديكورات</h2>
                             <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">أحدث الصيحات</span>
                         </div>
-                        <a href="interior-design.html" class="group flex items-center gap-2 text-sm text-gray-500 hover:text-primary transition-all duration-300 hover:translate-x-1">
+                        <a href="../interior-design/" class="group flex items-center gap-2 text-sm text-gray-500 hover:text-primary transition-all duration-300 hover:translate-x-1">
                             <span>عرض المزيد</span>
                             <i class="fas fa-chevron-left text-xs group-hover:translate-x-1 transition"></i>
                         </a>
@@ -832,7 +833,7 @@
                             <h2 class="text-2xl md:text-3xl font-bold text-primary">⚽ رياضة</h2>
                             <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">أخبار حصرية</span>
                         </div>
-                        <a href="sports.html" class="group flex items-center gap-2 text-sm text-gray-500 hover:text-primary transition-all duration-300 hover:translate-x-1">
+                        <a href="../sports/" class="group flex items-center gap-2 text-sm text-gray-500 hover:text-primary transition-all duration-300 hover:translate-x-1">
                             <span>عرض المزيد</span>
                             <i class="fas fa-chevron-left text-xs group-hover:translate-x-1 transition"></i>
                         </a>
@@ -1026,7 +1027,7 @@
                             <h2 class="text-2xl md:text-3xl font-bold text-primary">📊 تقارير وتحليلات اقتصادية</h2>
                             <span class="bg-primary/10 text-primary text-xs px-2 py-1 rounded-full">دراسات حصرية</span>
                         </div>
-                        <a href="reports-analysis.html" class="group flex items-center gap-2 text-sm text-gray-500 hover:text-primary transition-all duration-300 hover:translate-x-1">
+                        <a href="../reports-analysis/" class="group flex items-center gap-2 text-sm text-gray-500 hover:text-primary transition-all duration-300 hover:translate-x-1">
                             <span>عرض المزيد</span>
                             <i class="fas fa-chevron-left text-xs group-hover:translate-x-1 transition"></i>
                         </a>
@@ -1205,7 +1206,7 @@
                     </div>
                 </div>
 
-                <!-- Newsletter -->
+                <!-- newsletter -->
                 <div class="bg-gradient-to-br from-accent to-red-700 text-[#0B3B66]  p-6 rounded-xl shadow-lg">
                     <h3 class="text-xl font-bold mb-2">📧 النشرة الإخبارية</h3>
                     <p class="text-sm mb-4 opacity-90">اشترك ليصلك آخر أخبار المشاريع </p>

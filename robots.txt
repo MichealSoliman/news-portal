@@ -1,0 +1,6 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://news-portal1.com/sitemap.xml
+Sitemap: https://news-portal1.com/news-sitemap.xml

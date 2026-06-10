@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
         images.forEach(img => imageObserver.observe(img));
     }
 
-    // 6. News Ticker Pause on Hover
+    // 6. news Ticker Pause on Hover
     const ticker = document.querySelector('.ticker-content');
     if (ticker) {
         ticker.addEventListener('mouseenter', () => {

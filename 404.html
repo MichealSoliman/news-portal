@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>الصفحة غير موجودة | 404 - بوابة الاخبار</title>
+    <meta name="description" content="عذراً، الصفحة التي تبحث عنها غير موجودة في موقع بوابة الاخبار. تحقق من الرابط أو عد إلى الصفحة الرئيسية.">
+    <meta name="robots" content="noindex, follow">
+    
+    <!-- Tailwind CSS & Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        * { font-family: 'Tajawal', sans-serif; }
+        body { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); min-height: 100vh; }
+        
+        /* Floating animation for 404 text */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .float-404 { animation: float 4s ease-in-out infinite; }
+        
+        /* Glitch effect for 404 number */
+        @keyframes glitch {
+            0%, 100% { text-shadow: -3px 0 red, 3px 0 blue; transform: skew(0deg); }
+            20% { text-shadow: -3px 0 red, 3px 0 blue; transform: skew(2deg); }
+            40% { text-shadow: -3px 0 red, 3px 0 blue; transform: skew(-2deg); }
+            60% { text-shadow: -3px 0 red, 3px 0 blue; transform: skew(1deg); }
+            80% { text-shadow: -3px 0 red, 3px 0 blue; transform: skew(-1deg); }
+        }
+        .glitch-text {
+            animation: glitch 3s infinite;
+        }
+        
+        /* Pulse animation for buttons */
+        @keyframes pulse-border {
+            0%, 100% { border-color: rgba(59, 130, 246, 0.3); box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.2); }
+            50% { border-color: rgba(59, 130, 246, 0.8); box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+        }
+        .pulse-btn:hover {
+            animation: pulse-border 1.5s infinite;
+        }
+        
+        /* Rotating animation for search icon */
+        @keyframes rotate-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .rotate-slow { animation: rotate-slow 12s linear infinite; }
+        
+        /* Fade up animation */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 0.6s ease forwards;
+        }
+        @keyframes fadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- Simple Header -->
+    <header class="container mx-auto px-4 py-6 border-b border-white/10">
+        <a href="https://news-portal1.com" class="flex items-center gap-3 group w-fit">
+            <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                <i class="fas fa-newspaper text-white text-xl"></i>
+            </div>
+            <div>
+                <h1 class="text-2xl font-black tracking-tight">بوابة <span class="text-blue-500">الاخبار</span></h1>
+                <p class="text-[10px] text-gray-400">أخبار عاجلة وتحليلات حصرية</p>
+            </div>
+        </a>
+    </header>
+
+    <!-- Main 404 Content -->
+    <main class="container mx-auto px-4 py-12 md:py-20">
+        <div class="max-w-4xl mx-auto text-center">
+            
+            <!-- 404 Number with Glitch Effect -->
+            <div class="float-404 mb-6">
+                <div class="relative inline-block">
+                    <span class="text-[120px] md:text-[180px] lg:text-[220px] font-black glitch-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+                        404
+                    </span>
+                    <div class="absolute inset-0 flex items-center justify-center opacity-30 blur-sm">
+                        <span class="text-[120px] md:text-[180px] lg:text-[220px] font-black text-blue-500">404</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Error Title -->
+            <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 fade-up">
+                عذراً! <span class="text-blue-400">الصفحة غير موجودة</span>
+            </h2>
+            
+            <!-- Error Description -->
+            <p class="text-gray-300 text-base md:text-lg max-w-2xl mx-auto mb-8 fade-up delay-100">
+                يبدو أن الرابط الذي تبحث عنه قد يكون محذوفاً أو غير صحيح. 
+                ربما تكون الصفحة قد انتقلت إلى عنوان جديد، أو أن هناك خطأ في كتابة الرابط.
+            </p>
+            
+            <!-- Quick Actions -->
+            <div class="flex flex-wrap gap-4 justify-center mb-12 fade-up delay-200">
+                <a href="https://news-portal1.com" 
+                   class="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-3 rounded-xl font-bold transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-500/25">
+                    <i class="fas fa-home"></i>
+                    العودة إلى الرئيسية
+                </a>
+               <a href="mailto:info@news-portal1.com"
+   class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white px-6 py-3 rounded-xl font-bold transition-all duration-300 hover:scale-105">
+    <i class="fas fa-headset"></i>
+    الاتصال بالدعم
+</a>
+            </div>
+            
+            <!-- Search Box -->
+            <div class="max-w-md mx-auto mb-16 fade-up delay-300">
+                <div class="relative">
+                    <input type="text" 
+                           placeholder="ابحث عن خبر أو مقال..." 
+                           class="w-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl py-3 px-5 pr-12 text-white placeholder:text-gray-400 focus:outline-none focus:border-blue-500 transition-all">
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-lg"></i>
+                </div>
+                <p class="text-xs text-gray-400 mt-2">
+                    <i class="fas fa-lightbulb text-yellow-500"></i> حاول البحث عن الخبر الذي تريده
+                </p>
+            </div>
+            
+            <!-- Popular Categories -->
+            <div class="fade-up delay-400">
+                <h3 class="text-lg font-semibold mb-4 flex items-center justify-center gap-2">
+                    <i class="fas fa-fire text-orange-500"></i>
+                    الأقسام الأكثر قراءة
+                    <i class="fas fa-arrow-left text-blue-400 text-sm"></i>
+                </h3>
+                <div class="flex flex-wrap gap-3 justify-center">
+                    <a href="https://news-portal1.com/real-estate/" class="px-4 py-2 bg-white/5 hover:bg-blue-600/20 rounded-full text-sm transition-all border border-white/10 hover:border-blue-500">🏢 عقارات</a>
+                    <a href="https://news-portal1.com/construction/" class="px-4 py-2 bg-white/5 hover:bg-blue-600/20 rounded-full text-sm transition-all border border-white/10 hover:border-blue-500">🏗️ مقاولات</a>
+                    <a href="https://news-portal1.com/sports/" class="px-4 py-2 bg-white/5 hover:bg-blue-600/20 rounded-full text-sm transition-all border border-white/10 hover:border-blue-500">⚽ رياضة</a>
+                    <a href="https://news-portal1.com/security-systems/" class="px-4 py-2 bg-white/5 hover:bg-blue-600/20 rounded-full text-sm transition-all border border-white/10 hover:border-blue-500">🛡️ أمن وسلامة</a>
+                    <a href="https://news-portal1.com/interior-design/" class="px-4 py-2 bg-white/5 hover:bg-blue-600/20 rounded-full text-sm transition-all border border-white/10 hover:border-blue-500">🎨 تشطيبات</a>
+                </div>
+            </div>
+            
+            <!-- Latest News Section -->
+            <div class="mt-16 pt-8 border-t border-white/10 fade-up delay-500">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-lg font-semibold flex items-center gap-2">
+                        <i class="fas fa-clock text-blue-400"></i>
+                        أحدث الأخبار
+                    </h3>
+                    <a href="https://news-portal1.com" class="text-sm text-blue-400 hover:text-blue-300 transition">
+                        عرض الكل <i class="fas fa-arrow-left mr-1 text-xs"></i>
+                    </a>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 text-right">
+                    <div class="bg-white/5 rounded-xl p-4 hover:bg-white/10 transition">
+                        <span class="text-orange-400 text-xs">عاجل 🔥</span>
+                        <h4 class="font-bold text-sm mt-1 line-clamp-2">إطلاق مشروع "نيوم" السكني الجديد بطاقة استيعابية ضخمة</h4>
+                        <div class="flex items-center gap-3 text-xs text-gray-400 mt-2">
+                            <span><i class="fas fa-eye ml-1"></i> 15.2k</span>
+                            <span><i class="fas fa-calendar ml-1"></i> 6 يونيو 2026</span>
+                        </div>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-4 hover:bg-white/10 transition">
+                        <span class="text-green-400 text-xs">📈 عاجل</span>
+                        <h4 class="font-bold text-sm mt-1 line-clamp-2">مؤشر الأسهم السعودي يرتفع بنسبة 2.5% مع إعلان مشاريع جديدة</h4>
+                        <div class="flex items-center gap-3 text-xs text-gray-400 mt-2">
+                            <span><i class="fas fa-eye ml-1"></i> 8.7k</span>
+                            <span><i class="fas fa-calendar ml-1"></i> 6 يونيو 2026</span>
+                        </div>
+                    </div>
+                    <div class="bg-white/5 rounded-xl p-4 hover:bg-white/10 transition">
+                        <span class="text-blue-400 text-xs">⚽ رياضة</span>
+                        <h4 class="font-bold text-sm mt-1 line-clamp-2">الهلال يتوج بلقب دوري أبطال آسيا للمرة الخامسة في تاريخه</h4>
+                        <div class="flex items-center gap-3 text-xs text-gray-400 mt-2">
+                            <span><i class="fas fa-eye ml-1"></i> 25.3k</span>
+                            <span><i class="fas fa-calendar ml-1"></i> 6 يونيو 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Simple Footer -->
+    <footer class="container mx-auto px-4 py-6 mt-12 border-t border-white/10 text-center text-gray-400 text-sm">
+        <p>© 2026 بوابة الاخبار - جميع الحقوق محفوظة</p>
+        <p class="text-xs mt-1">أخبار عاجلة وتحليلات حصرية من قلب المملكة</p>
+    </footer>
+
+    <!-- Simple Script for search (redirects to home with search param) -->
+    <script>
+        // Search functionality - redirects to homepage with search query
+        const searchInput = document.querySelector('input[type="text"]');
+        if (searchInput) {
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    const query = this.value.trim();
+                    if (query) {
+                        window.location.href = `https://news-portal1.com/?s=${encodeURIComponent(query)}`;
+                    }
+                }
+            });
+            
+            // Add search button click handler
+            const searchIcon = document.querySelector('.fa-search');
+            if (searchIcon) {
+                searchIcon.parentElement.addEventListener('click', function() {
+                    const query = searchInput.value.trim();
+                    if (query) {
+                        window.location.href = `https://news-portal1.com/?s=${encodeURIComponent(query)}`;
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>
