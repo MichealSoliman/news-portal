@@ -16,145 +16,589 @@
 </head>
 <body class="bg-white text-gray-800">
 
-    <!-- Header & Nav -->
-    <header class="bg-white border-b py-4">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="flex items-center space-x-reverse space-x-4">
-                <button id="dark-mode-toggle" class="p-2 rounded-full hover:bg-gray-100"><i class="fas fa-moon"></i></button>
-                <div class="text-sm text-gray-500 hidden md:block"><span id="current-date"></span></div>
-            </div>
-            <div class="text-3xl font-bold text-primary"><a href="../index.html">بوابة الاخبار </a></div>
-            <div class="flex items-center space-x-reverse space-x-4">
-                <div class="relative hidden md:block">
-                    <input type="text" placeholder="بحث..." class="border rounded-full py-1 px-4 focus:outline-none focus:ring-2 focus:ring-primary">
-                    <i class="fas fa-search absolute left-3 top-2 text-gray-400"></i>
+<div class="sticky top-0 z-50">
+        <!-- Header -->
+    <header class="bg-white border-b shadow-md sticky top-0 z-50 transition-colors duration-300">
+        <div class="container mx-auto px-4">
+            <!-- Top Bar -->
+            <div class="flex justify-between items-center py-2 text-sm text-gray-600 border-b">
+                <div id="current-date" class="font-medium"></div>
+                <div class="flex items-center gap-5">
+                    <a href="/" class="hover:text-primary transition">الرئيسية</a>
+                    <a href="#" class="hover:text-primary transition">سياسة الخصوصية</a>
+                    <a href="mailto:info@news-portal1.com" class="hover:text-primary transition">
+    اتصل بنا
+</a>
+                    
                 </div>
-                <button class="md:hidden text-2xl" id="mobile-menu-btn"><i class="fas fa-bars"></i></button>
             </div>
+            <!-- Main Header -->
+           <div class="flex flex-col md:flex-row justify-between items-center gap-4 py-5">
+
+    <!-- Social Media -->
+    <div class="flex justify-center gap-3 order-2 md:order-1">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/newspoortal.1/"
+            class="w-9 h-9 bg-blue-700 text-white rounded-full flex items-center justify-center hover:scale-110 transition transform">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/news.portal.1/"
+            class="w-9 h-9 bg-gradient-to-tr from-pink-500 to-orange-500 text-white rounded-full flex items-center justify-center hover:scale-110 transition transform">
+            <i class="fab fa-instagram"></i>
+        </a>
+
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@news.portal.1?_r=1&_t=ZS-972bV61teVO"
+            class="w-9 h-9 bg-black text-white rounded-full flex items-center justify-center hover:scale-110 transition transform">
+            <i class="fab fa-tiktok"></i>
+        </a>
+
+        <!-- Twitter X -->
+        <a href="https://x.com/news_portal1"
+            class="w-9 h-9 bg-slate-800 text-white rounded-full flex items-center justify-center hover:scale-110 transition transform">
+            <i class="fab fa-x-twitter"></i>
+        </a>
+
+        <!-- Snapchat -->
+        <a href="https://www.snapchat.com/add/news_portal1?share_id=blPkDEBy5ls&locale=ar-EG"
+            class="w-9 h-9 bg-yellow-400 text-black rounded-full flex items-center justify-center hover:scale-110 transition transform">
+            <i class="fab fa-snapchat-ghost"></i>
+        </a>
+    </div>
+
+    <!-- Logo -->
+    <div class="text-center order-1 md:order-2">
+        <a href="/" class="inline-block">
+            <img src="./assets/img/logo.webp"
+                alt="لوجو الموقع"
+                class="mx-auto h-20 md:h-24 w-auto">
+        </a>
+    </div>
+
+    <!-- Search -->
+    <div class="relative hidden md:block order-3">
+        <input type="text"
+            placeholder="بحث..."
+            class="border rounded-full py-2 px-4 pr-10 text-sm focus:outline-none focus:ring-2 focus:ring-primary w-64">
+
+        <i class="fas fa-search absolute right-3 top-3 text-gray-400"></i>
+    </div>
+
+</div>
         </div>
     </header>
 
-    <nav class="bg-primary text-white sticky top-0 z-50 shadow-lg hidden md:block">
+    <!-- Navigation Bar - Desktop -->
+    <nav class="bg-primary  text-white  top-[140px] md:top-[150px] z-40 shadow-lg hidden md:block">
         <div class="container mx-auto px-4">
-            <ul class="flex space-x-reverse space-x-6 py-3 text-sm font-semibold overflow-x-auto">
-                <li><a href="../index.html" class="hover:text-gray-300 transition">الصفحة الرئيسية</a></li>
-                <li><a href="../breaking-news/" class="hover:text-gray-300 transition">أخبار عاجلة</a></li>
-                <li><a href="../daily-news/" class="hover:text-gray-300 transition">أخبار اليوم</a></li>
-                <li><a href="../real-estate/" class="hover:text-gray-300 transition">عقارات</a></li>
-                <li><a href="../construction/" class="hover:text-gray-300 transition">مقاولات وإنشاءات</a></li>
-                <li><a href="../security-systems/" class="hover:text-gray-300 transition">أمن وسلامة</a></li>
-                <li><a href="../interior-design/" class="hover:text-gray-300 transition">تشطيبات وديكورات</a></li>
-                <li><a href="../sports/" class="hover:text-gray-300 transition">رياضة</a></li>
-                <li><a href="../reports-analysis/" class="hover:text-gray-300 transition">تقارير وتحليلات</a></li>
-                <li><a href="#" class="hover:text-gray-300 transition">من نحن</a></li>
+            <ul class="flex justify-center space-x-reverse space-x-8 py-3 text-sm font-semibold">
+                <li><a href="../index.html" class=" hover:text-amber-200  transition">الرئيسية</a></li>
+                <li><a href="../breaking-news/" class="hover:text-amber-200 transition">أخبار عاجلة</a></li>
+                <li><a href="../daily-news/" class="hover:text-amber-200 transition">أخبار اليوم</a></li>
+                <li><a href="../real-estate/" class="hover:text-amber-200 transition">عقارات</a></li>
+                <li><a href="../construction/" class="hover:text-amber-200 transition">مقاولات</a></li>
+                <li><a href="../security-systems/" class="hover:text-amber-200 transition">أمن وسلامة</a></li>
+                <li><a href="../interior-design/" class="hover:text-amber-200 transition">تشطيبات</a></li>
+                <li><a href="../sports/" class="hover:text-amber-200 transition">رياضة</a></li>
+                <li><a href="../reports-analysis/" class="hover:text-amber-200 transition">تقارير</a></li>
+               
             </ul>
         </div>
     </nav>
 
-    <main class="container mx-auto px-4 py-8">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <!-- Article Content -->
-            <div class="lg:col-span-2">
-                <nav class="flex mb-4 text-gray-500 text-sm">
-                    <ol class="inline-flex items-center space-x-reverse space-x-2">
-                        <li><a href="../index.html" class="hover:text-primary">الرئيسية</a></li>
-                        <li><i class="fas fa-chevron-left text-xs mx-2"></i></li>
-                        <li><a href="../real-estate/" class="hover:text-primary">عقارات</a></li>
-                    </ol>
-                </nav>
+    <!-- Mobile Menu Button & Menu -->
+    <div class="md:hidden  top-[200px] md:top-[150px] z-40 bg-primary p-3 flex justify-between items-center">
+        <button id="mobile-menu-toggle" class="text-white text-2xl">
+            <i class="fas fa-bars"></i>
+        </button>
+        <span class="text-white text-sm font-bold">القائمة</span>
+    </div>
+    <div id="mobile-nav-menu" class="md:hidden bg-primary  top-[300px] shadow-xl transition-all duration-300 ease-in-out overflow-hidden z-50 mobile-nav-closed">
+        <ul class="flex flex-col py-3 text-sm font-semibold">
+            <li><a href="../index.html" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🏠 الرئيسية</a></li>
+            <li><a href="../breaking-news/" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">⚡ أخبار عاجلة</a></li>
+            <li><a href="../daily-news/" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">📰 أخبار اليوم</a></li>
+            <li><a href="../real-estate/" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🏢 عقارات</a></li>
+            <li><a href="../construction/" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🏗️ مقاولات</a></li>
+            <li><a href="../security-systems/" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🛡️ أمن وسلامة</a></li>
+            <li><a href="../interior-design/" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">🎨 تشطيبات</a></li>
+            <li><a href="../sports/" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">⚽ رياضة</a></li>
+            <li><a href="../reports-analysis/" class="block px-6 py-3 hover:bg-primary/80 border-b border-blue-700/30 text-white">📊 تقارير</a></li>
+           
+        </ul>
+    </div>
+</div>
 
-                <h1 class="text-3xl md:text-4xl font-bold text-primary mb-6 leading-tight">تطوير أكبر مجمع سكني ذكي في الرياض باستثمارات تتجاوز 10 مليارات ريال</h1>
+<main class="container mx-auto px-4 sm:px-6 py-8">
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+        
+        <!-- ============================================ -->
+        <!-- الجزء الأيمن: ثابت (Sticky Sidebar) - مساحات إعلانية عامة -->
+        <!-- ============================================ -->
+        <aside class="lg:w-80 xl:w-96 order-first lg:order-last">
+            <div class="sticky top-6 space-y-6">
                 
-                <div class="flex flex-wrap items-center text-sm text-gray-500 mb-8 border-b pb-4 gap-4">
-                    <span><i class="far fa-calendar-alt ml-1"></i> 6 يونيو 2026</span>
-                    <span><i class="far fa-user ml-1"></i> الكاتب: فهد القحطاني</span>
-                    <span><i class="far fa-folder ml-1"></i> القسم: عقارات</span>
-                    <div class="flex space-x-reverse space-x-2 mr-auto">
-                        <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fab fa-facebook text-xl"></i></a>
-                        <a href="#" class="text-blue-400 hover:text-blue-600"><i class="fab fa-twitter text-xl"></i></a>
-                        <a href="#" class="text-green-600 hover:text-green-800"><i class="fab fa-whatsapp text-xl"></i></a>
+                <!-- مساحة إعلانية عامة #1 - بحجم كبير -->
+                <div class="bg-gray-100 rounded-2xl border-2 border-dashed border-gray-300 overflow-hidden">
+                    <div class="bg-gray-200 px-3 py-1 text-center">
+                        <span class="text-xs text-gray-500">إعلان</span>
+                    </div>
+                    <div class="p-8 text-center">
+                        <div class="bg-white rounded-xl p-6 mb-3">
+                            <i class="fas fa-ad text-4xl text-gray-400 mb-2"></i>
+                            <p class="text-gray-500 text-sm">مساحة إعلانية</p>
+                            <p class="text-gray-400 text-xs mt-1">728x90</p>
+                        </div>
+                        <p class="text-xs text-gray-400">يمكنك وضع أي إعلان هنا</p>
                     </div>
                 </div>
 
-                <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1200&q=80" class="w-full rounded-xl mb-8 shadow-lg" alt="Article Image">
-
-                <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-6">
-                    <p class="font-semibold text-xl text-gray-900">أعلنت وزارة الشؤون البلدية والقروية والإسكان عن إطلاق المرحلة الأولى من مشروع "الرياض الذكية"، وهو مجمع سكني متكامل يهدف إلى توفير حلول سكنية عصرية مدعومة بالتقنيات الحديثة.</p>
-                    <p>يأتي هذا المشروع ضمن خطط المملكة لزيادة نسبة تملك المواطنين للمساكن، ويهدف إلى توفير أكثر من 5000 وحدة سكنية متنوعة بين الفلل والشقق الفاخرة، مع التركيز على الاستدامة البيئية وكفاءة الطاقة.</p>
-                    <blockquote class="border-r-4 border-primary pr-4 italic text-gray-600 bg-gray-50 py-4 px-6">
-                        "إن هذا المشروع يمثل نقلة نوعية في مفهوم السكن بالمملكة، حيث ندمج بين التكنولوجيا والراحة لتوفير بيئة حياة مثالية للأسر ." - صرح بذلك المتحدث الرسمي للوزارة.
-                    </blockquote>
-                    <p>ومن المتوقع أن يتم الانتهاء من المرحلة الأولى من المشروع في نهاية عام 2027، حيث بدأت بالفعل أعمال البنية التحتية والتمهيد للموقع بمشاركة كبرى شركات المقاولات المحلية والعالمية.</p>
-                </div>
-
-                <!-- Social Share -->
-                <div class="mt-12 p-6 bg-gray-50 rounded-lg flex items-center justify-between">
-                    <span class="font-bold">شارك الخبر:</span>
-                    <div class="flex space-x-reverse space-x-4">
-                        <button class="bg-blue-600 text-white px-4 py-2 rounded flex items-center text-sm"><i class="fab fa-facebook-f ml-2"></i> فيسبوك</button>
-                        <button class="bg-blue-400 text-white px-4 py-2 rounded flex items-center text-sm"><i class="fab fa-twitter ml-2"></i> تويتر</button>
-                        <button class="bg-green-500 text-white px-4 py-2 rounded flex items-center text-sm"><i class="fab fa-whatsapp ml-2"></i> واتساب</button>
+                <!-- مساحة إعلانية عامة #2 - مربعة -->
+                <div class="bg-gray-100 rounded-2xl border-2 border-dashed border-gray-300 overflow-hidden">
+                    <div class="bg-gray-200 px-3 py-1 text-center">
+                        <span class="text-xs text-gray-500">إعلان</span>
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="bg-white rounded-xl h-48 flex items-center justify-center mb-3">
+                            <div class="text-center">
+                                <i class="fas fa-image text-3xl text-gray-400 mb-2"></i>
+                                <p class="text-gray-500 text-sm">300 × 250</p>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-400">مساحة إعلانية | بانر</p>
                     </div>
                 </div>
 
-                <!-- Related Articles -->
-                <div class="mt-12">
-                    <h3 class="text-2xl font-bold text-primary mb-6 border-b-2 border-primary pb-2">أخبار ذات صلة</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="flex space-x-reverse space-x-4">
-                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=150&q=80" class="w-24 h-24 object-cover rounded shadow" alt="Related">
-                            <div>
-                                <h4 class="font-bold text-sm mb-2 hover:text-primary"><a href="#">ارتفاع الطلب على الوحدات السكنية في المنطقة الشرقية</a></h4>
-                                <span class="text-xs text-gray-400">5 يونيو 2026</span>
+                <!-- مساحة إعلانية عامة #3 - عمودية -->
+                <div class="bg-gray-100 rounded-2xl border-2 border-dashed border-gray-300 overflow-hidden">
+                    <div class="bg-gray-200 px-3 py-1 text-center">
+                        <span class="text-xs text-gray-500">إعلان</span>
+                    </div>
+                    <div class="p-6 text-center">
+                        <div class="bg-white rounded-xl h-96 flex items-center justify-center mb-3">
+                            <div class="text-center">
+                                <i class="fas fa-chart-simple text-3xl text-gray-400 mb-2"></i>
+                                <p class="text-gray-500 text-sm">160 × 600</p>
                             </div>
                         </div>
-                        <div class="flex space-x-reverse space-x-4">
-                            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=150&q=80" class="w-24 h-24 object-cover rounded shadow" alt="Related">
-                            <div>
-                                <h4 class="font-bold text-sm mb-2 hover:text-primary"><a href="#">مشروع "ضاحية الفرسان" يطرح وحدات جديدة</a></h4>
-                                <span class="text-xs text-gray-400">4 يونيو 2026</span>
+                        <p class="text-xs text-gray-400">مساحة إعلانية | سكايسكرابر</p>
+                    </div>
+                </div>
+
+                <!-- مساحة إعلانية عامة #4 -->
+                <div class="bg-gray-100 rounded-2xl border-2 border-dashed border-gray-300 overflow-hidden">
+                    <div class="bg-gray-200 px-3 py-1 text-center">
+                        <span class="text-xs text-gray-500">إعلان</span>
+                    </div>
+                    <div class="p-5 text-center">
+                        <div class="flex gap-2 justify-center mb-2">
+                            <div class="bg-white rounded-lg w-20 h-20 flex items-center justify-center">
+                                <i class="fas fa-bolt text-gray-400"></i>
+                            </div>
+                            <div class="bg-white rounded-lg w-20 h-20 flex items-center justify-center">
+                                <i class="fas fa-star text-gray-400"></i>
                             </div>
                         </div>
+                        <p class="text-xs text-gray-400">بكجات إعلانية | متعددة الأحجام</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ============================================ -->
+        <!-- الجزء الأيسر: محتوى المقال (سرد طويل - 2000 كلمة) -->
+        <!-- ============================================ -->
+        <article class="flex-1">
+            
+            <!-- Breadcrumbs بسيطة -->
+            <nav class="flex mb-6 text-gray-500 text-sm">
+                <ol class="inline-flex items-center flex-wrap space-x-reverse space-x-2">
+                    <li><a href="../index.html" class="hover:text-primary">الرئيسية</a></li>
+                    <li><i class="fas fa-chevron-left text-xs mx-2"></i></li>
+                    <li><a href="../real-estate/" class="hover:text-primary">عقارات</a></li>
+                    <li><i class="fas fa-chevron-left text-xs mx-2"></i></li>
+                    <li class="text-gray-700">تطوير أكبر مجمع سكني ذكي في الرياض</li>
+                </ol>
+            </nav>
+
+            <!-- عنوان المقال كبير جداً -->
+            <h1 class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight mb-6">تطوير أكبر مجمع سكني ذكي في الرياض باستثمارات تتجاوز 10 مليارات ريال</h1>
+            
+            <!-- معلومات الكاتب والتاريخ -->
+            <div class="flex flex-wrap items-center gap-4 text-sm text-gray-600 border-b border-gray-200 pb-6 mb-8">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">ف</div>
+                    <span><strong class="text-gray-800">فهد القحطاني</strong> - كاتب متخصص في الشؤون العقارية</span>
+                </div>
+                <span><i class="far fa-calendar-alt ml-1"></i> 6 يونيو 2026</span>
+                <span><i class="far fa-clock ml-1"></i> وقت القراءة: 8-10 دقائق</span>
+            </div>
+
+            <!-- الصورة الرئيسية -->
+            <figure class="mb-10">
+                <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1400&q=80" 
+                     class="w-full rounded-2xl shadow-xl" 
+                     alt="تصميم المجمع السكني الذكي في الرياض">
+                <figcaption class="text-center text-gray-500 text-sm mt-3">تصميم توضيحي لمشروع "الرياض الذكية" - أكبر مجمع سكني ذكي في المملكة (تصميم: شركة الرياض للتعمير)</figcaption>
+            </figure>
+
+            <!-- ============================================ -->
+            <!-- المحتوى النصي للمقال - سرد طويل جداً (2000+ كلمة) -->
+            <!-- ============================================ -->
+            <div class="prose prose-lg max-w-none text-gray-700 leading-loose space-y-6">
+                
+                <!-- المقدمة (الليد) - حجم كبير وجذاب -->
+                <div class="text-xl md:text-2xl font-semibold text-gray-900 border-r-4 border-primary pr-5 py-2 bg-gray-50/50 rounded-l-xl">
+                    في خطوة تعد الأكبر من نوعها في قطاع الإسكان السعودي، أعلنت وزارة الشؤون البلدية والقروية والإسكان عن إطلاق المرحلة الأولى من مشروع "الرياض الذكية"، وهو مجمع سكني متكامل يهدف إلى توفير حلول سكنية عصرية مدعومة بأحدث التقنيات العالمية، باستثمارات ضخمة تتجاوز 10 مليارات ريال سعودي.
+                </div>
+                
+                <!-- الفقرة 1 -->
+                <p>يأتي هذا المشروع العملاق ضمن خطط المملكة العربية السعودية لزيادة نسبة تملك المواطنين للمساكن، والتي تستهدف الوصول إلى 70% بحلول عام 2030، وفقاً لمستهدفات رؤية المملكة الطموحة. ويهدف المجمع إلى توفير أكثر من <strong class="text-primary">5000 وحدة سكنية</strong> متنوعة ما بين فلل فاخرة وشقق عصرية بمساحات مختلفة تناسب جميع فئات المجتمع، مع التركيز بشكل أساسي على الاستدامة البيئية وكفاءة استهلاك الطاقة، مما يجعله نموذجاً رائداً للمدن الذكية في المنطقة.</p>
+                
+                <!-- الفقرة 2 -->
+                <p>وتشير المصادر الرسمية إلى أن المشروع سيقام على مساحة شاسعة تزيد عن <strong>2 مليون متر مربع</strong> في شمال شرق الرياض، تحديداً في منطقة استراتيجية قريبة من المطار الدولي ومحاور النقل الرئيسية. وسيشتمل المجمع على مرافق متكاملة لا مثيل لها، تشمل مدارس عالمية بأعلى المعايير، مراكز تجارية فاخرة تضم أشهر الماركات العالمية، نوادي صحية ومراكز طبية متطورة، بالإضافة إلى حدائق عامة ذكية تعمل بالطاقة الشمسية وممرات مخصصة للمشي والدراجات الهوائية.</p>
+                
+                <!-- الفقرة 3 -->
+                <p>وقد بدأت أعمال البنية التحتية بالفعل في الموقع، حيث تم الانتهاء من أعمال الحفر والتمهيد، وتعمل فرق المقاولين على قدم وساق لإنشاء شبكات الطرق الداخلية والمرافق الأساسية من كهرباء ومياه وصرف صحي. وتشارك في تنفيذ المشروع كبرى شركات المقاولات المحلية مثل <strong>شركة الرياض للتعمير</strong> و<strong>مجموعة بن لادن السعودية</strong>، إلى جانب تحالفات دولية متخصصة في المدن الذكية من كوريا الجنوبية واليابان، لضمان أعلى مستويات الجودة والالتزام بالجداول الزمنية المحددة.</p>
+                
+                <!-- اقتباس بارز من مسؤول -->
+                <div class="bg-gradient-to-l from-gray-50 to-white p-6 md:p-8 rounded-2xl border-r-4 border-primary shadow-md my-8">
+                    <i class="fas fa-quote-right text-3xl text-primary/30 mb-3 block"></i>
+                    <p class="text-gray-800 text-lg md:text-xl font-medium leading-relaxed">"إن هذا المشروع يمثل نقلة نوعية غير مسبوقة في مفهوم السكن بالمملكة. نحن لا نبني منازل فقط، بل نبني مجتمعاً متكاملاً يدمج بين التكنولوجيا والراحة والاستدامة، لتوفير بيئة حياة مثالية للأسر السعودية، تتماشى مع تطلعات قيادتنا الرشيدة."</p>
+                    <p class="mt-3 font-bold text-primary">— المهندس ماجد الحقيل، وزير الشؤون البلدية والقروية والإسكان</p>
+                </div>
+                
+                <!-- ======== القسم الثاني: تفاصيل المشروع ======== -->
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">أولاً: تفاصيل المشروع بالأرقام والمراحل الزمنية</h2>
+                
+                <p>تم تقسيم مشروع "الرياض الذكية" إلى ثلاث مراحل رئيسية، تمتد على مدى 5 سنوات، حيث من المتوقع أن يتم الانتهاء من جميع المراحل بحلول نهاية عام 2030. وسنستعرض فيما يلي تفاصيل كل مرحلة والأرقام المتعلقة بها:</p>
+                
+                <p><strong>المرحلة الأولى (2026 - 2027):</strong> وتشمل بناء 1,500 وحدة سكنية على مساحة 500 ألف متر مربع، مع تخصيص 30% من المساحة للمرافق الخدمية والترفيهية. وتبلغ استثمارات هذه المرحلة حوالي 3.5 مليار ريال، ومن المتوقع أن يتم تسليم أولى الوحدات في الربع الأول من عام 2028.</p>
+                
+                <p><strong>المرحلة الثانية (2027 - 2029):</strong> وتضم 2,000 وحدة سكنية إضافية مع توسعة المرافق القائمة وإضافة مراكز رياضية وثقافية. وتقدر استثمارات هذه المرحلة بنحو 4 مليارات ريال، مع التركيز على تطوير التقنيات الذكية وشبكات الاتصالات.</p>
+                
+                <p><strong>المرحلة الثالثة (2029 - 2030):</strong> المرحلة النهائية والتي ستشمل إكمال 1,500 وحدة متبقية، إلى جانب إنشاء حديقة مركزية ذكية ومنطقة تجارية كبرى. وتبلغ استثمارات هذه المرحلة حوالي 2.5 مليار ريال، على أن يتم الانتهاء منها بالكامل بنهاية عام 2030.</p>
+                
+                <!-- بطاقات إحصائيات جذابة -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 my-8">
+                    <div class="text-center p-4 bg-blue-50 rounded-xl">
+                        <div class="text-2xl md:text-3xl font-bold text-blue-700">10+</div>
+                        <div class="text-xs md:text-sm text-gray-600">مليار ريال</div>
+                        <div class="text-xs text-gray-400">إجمالي الاستثمارات</div>
+                    </div>
+                    <div class="text-center p-4 bg-green-50 rounded-xl">
+                        <div class="text-2xl md:text-3xl font-bold text-green-700">5,000</div>
+                        <div class="text-xs md:text-sm text-gray-600">وحدة سكنية</div>
+                        <div class="text-xs text-gray-400">إجمالي الوحدات</div>
+                    </div>
+                    <div class="text-center p-4 bg-yellow-50 rounded-xl">
+                        <div class="text-2xl md:text-3xl font-bold text-yellow-700">40%</div>
+                        <div class="text-xs md:text-sm text-gray-600">توفير طاقة</div>
+                        <div class="text-xs text-gray-400">كفاءة استهلاك</div>
+                    </div>
+                    <div class="text-center p-4 bg-purple-50 rounded-xl">
+                        <div class="text-2xl md:text-3xl font-bold text-purple-700">2030</div>
+                        <div class="text-xs md:text-sm text-gray-600">تاريخ الانتهاء</div>
+                        <div class="text-xs text-gray-400">لكامل المشروع</div>
+                    </div>
+                </div>
+                
+                <!-- ======== القسم الثالث: التقنيات الذكية ======== -->
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">ثانياً: التقنيات الذكية المتطورة المطبقة في المجمع</h2>
+                
+                <p>يعتبر مشروع "الرياض الذكية" الأول من نوعه في المملكة من حيث دمج التقنيات الذكية في جميع جوانب الحياة اليومية. فقد تم التعاقد مع كبرى الشركات العالمية المتخصصة في المدن الذكية لتوفير أحدث الأنظمة والتقنيات، ومن أبرزها:</p>
+                
+                <ul class="list-none space-y-3 pr-0">
+                    <li class="flex items-start gap-3"><i class="fas fa-wifi text-primary text-xl mt-0.5"></i> <span><strong>شبكة إنترنت فائقة السرعة FTTH</strong> - توفير إنترنت لاسلكي بسرعات تصل إلى 1 جيجابت في الثانية لجميع الوحدات السكنية والمرافق العامة مجاناً.</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-microchip text-primary text-xl mt-0.5"></i> <span><strong>أنظمة تحكم ذكية متكاملة</strong> - نظام مركزي للتحكم في الإضاءة والتكييف والأجهزة المنزلية عبر تطبيق جوال واحد، يمكن السكان من إدارة منازلهم عن بُعد.</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-solar-panel text-primary text-xl mt-0.5"></i> <span><strong>الاستدامة والطاقة المتجددة</strong> - تركيب ألواح شمسية على أسطح جميع المباني لتوليد 40% من احتياجات المجمع من الكهرباء، مع نظام تخزين طاقة متطور.</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-video text-primary text-xl mt-0.5"></i> <span><strong>أنظمة أمن ومراقبة ذكية</strong> - كاميرات ذكية بتقنية التعرف على الوجوه وألواح ذكية للدخول، مرتبطة بغرفة تحكم مركزية تعمل على مدار الساعة.</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-car text-primary text-xl mt-0.5"></i> <span><strong>مواقف ذكية وشحن كهربائي</strong> - توفير محطات شحن للسيارات الكهربائية في كل مبنى، مع نظام حجز ذكي للمواقف عبر التطبيق.</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-trash-alt text-primary text-xl mt-0.5"></i> <span><strong>نظام إدارة نفايات آلي</strong> - شبكة أنفاق تعمل بالطاقة الشمسية لنقل النفايات من المنازل إلى محطات المعالجة المركزية بشكل آلي بالكامل.</span></li>
+                </ul>
+                
+                <!-- صندوق معلومات جانبي -->
+                <div class="bg-amber-50 p-6 rounded-2xl border border-amber-200 my-8">
+                    <div class="flex items-start gap-3">
+                        <i class="fas fa-lightbulb text-amber-500 text-2xl"></i>
+                        <div>
+                            <p class="font-bold text-amber-800 mb-2">🔹 معلومة حصرية:</p>
+                            <p class="text-gray-700">سيتم إنشاء أول "حديقة عمودية" ذكية في المملكة ضمن هذا المشروع، بارتفاع 50 متراً، وتعمل بالكامل بالطاقة الشمسية المعاد تدويرها. وستحتوي الحديقة على أكثر من 100 نوع من النباتات المحلية والنادرة، مع نظام ري آلي ذكي يستهلك 70% أقل من المياه مقارنة بالحدائق التقليدية. ومن المقرر أن تكون الحديقة وجهة سياحية وترفيهية مفتوحة للجمهور.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- ======== القسم الرابع: الجدول الزمني ======== -->
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">ثالثاً: الجدول الزمني للتسليم وأسعار الوحدات</h2>
+                
+                <p>وفقاً للجدول الزمني المعلن من قبل وزارة الإسكان، سيتم التسليم على مراحل، حيث ستكون المرحلة الأولى جاهزة للتسليم في نهاية عام 2027، على أن تتبعها المرحلة الثانية في منتصف عام 2029، والمرحلة الثالثة والأخيرة في نهاية عام 2030. وقد تم بالفعل الانتهاء من أعمال البنية التحتية الأساسية، وتعمل فرق العمل حالياً على بناء النماذج الأولى للوحدات السكنية لعرضها على الجمهور.</p>
+                
+                <p>وبخصوص الأسعار، فقد أعلن صندوق التنمية العقارية عن خطة تمويلية ميسرة للمواطنين المستحقين للدعم السكني. وتبدأ أسعار الشقق من <strong>850 ألف ريال</strong> للشقة ذات الثلاث غرف وصالة، وتصل إلى 1.8 مليون ريال للفلل الكبيرة. وتتوفر خطط سداد مرنة تمتد إلى 30 عاماً، مع دفعات مقدمة تبدأ من 5% فقط للمواطنين المستفيدين من الدعم الحكومي. كما سيتم تخصيص 15% من الوحدات للإيجار طويل الأجل بأسعار مدعومة.</p>
+                
+                <!-- ======== القسم الخامس: الأثر الاقتصادي ======== -->
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">رابعاً: الأثر الاقتصادي المتوقع وتوفير فرص العمل</h2>
+                
+                <p>من المتوقع أن يساهم مشروع "الرياض الذكية" بشكل كبير في دعم الاقتصاد المحلي، حيث تشير تقديرات الخبراء إلى أنه سيخلق أكثر من <strong>25 ألف فرصة عمل مباشرة وغير مباشرة</strong> خلال مراحل التنفيذ المختلفة. وتشمل هذه الفرص مهندسين وفنيين وعمالة ماهرة في قطاع التشييد، بالإضافة إلى آلاف الوظائف الدائمة بعد اكتمال المشروع في مجالات الصيانة والإدارة والتقنية والخدمات.</p>
+                
+                <p>كما سينعش المشروع الحركة العقارية في شمال شرق الرياض، ومن المتوقع أن ترتفع أسعار العقارات في المناطق المجاورة بنسبة تتراوح بين 15% إلى 25% خلال السنوات الثلاث المقبلة، مما سيعود بالنفع على المستثمرين وأصحاب العقارات في المنطقة. وقد بدأ العديد من المستثمرين بالفعل في شراء الأراضي القريبة من موقع المشروع تمهيداً لإقامة مشاريع خدمية وتجارية تستفيد من الزخم المتوقع.</p>
+                
+                <!-- ======== القسم السادس: التحديات والحلول ======== -->
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">خامساً: التحديات التي واجهت المشروع والحلول المبتكرة</h2>
+                
+                <p>لم يخلُ طريق هذا المشروع الضخم من التحديات، فقد واجه القائمون عليه عدة عقبات لوجستية وفنية، أبرزها تضاريس الأرض غير المستوية في بعض المناطق، ونقص المواد الخام في فترات معينة بسبب ارتفاع الطلب العالمي، بالإضافة إلى صعوبة تنسيق العمل بين أكثر من 15 مقاولاً رئيسياً يعملون في الموقع نفسه.</p>
+                
+                <p>ولكن بفضل الخبرات المحلية والدولية التي تم استقطابها، تم التغلب على هذه التحديات بطرق مبتكرة. فقد تم استخدام تقنيات المسح الجوي بالطائرات بدون طيار لرسم خرائط دقيقة للأرض وتسويتها بأقل تكلفة، كما تم إنشاء سلسلة توريد محلية بالتعاون مع المصانع السعودية لتأمين المواد المطلوبة، وتم اعتماد نظام إدارة مركزي لتنسيق أعمال المقاولين وتجنب أي تعارض أو تأخير في الجدول الزمني.</p>
+                
+                <!-- ======== الخاتمة ======== -->
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mt-12 mb-4">خلاصة المشروع وأهميته الاستراتيجية</h2>
+                
+                <p>يمثل مشروع "الرياض الذكية" أكثر من مجرد مجمع سكني؛ إنه نموذج حي ومتكامل للمدن الذكية التي تتطلع المملكة إلى تعميمها في كافة مناطقها. ويأتي هذا المشروع ضمن حزمة واسعة من المشاريع السكنية العملاقة التي تنفذها وزارة الإسكان بالتعاون مع القطاع الخاص، بهدف تحقيق مستهدفات رؤية المملكة 2030 بزيادة نسبة تملك الأسر السعودية للمساكن إلى 70%، وتحسين جودة الحياة للمواطنين والمقيمين على حد سواء.</p>
+                
+                <p>وقد صرح معالي وزير الشؤون البلدية والقروية والإسكان في ختام المؤتمر الصحفي للإعلان عن المشروع قائلاً: "نحن فخورون بهذا الإنجاز الذي سيكون بإذن الله نقلة نوعية في تاريخ الإسكان السعودي. مشروع الرياض الذكية ليس مجرد منازل، بل هو مجتمع متكامل يحقق أعلى معايير الراحة والاستدامة والتكنولوجيا، ونتمنى أن يكون نموذجاً يُحتذى به في جميع مدن المملكة مستقبلاً."</p>
+                
+                <p>ومن المتوقع أن يتم فتح باب الحجز الإلكتروني للوحدات السكنية في المرحلة الأولى خلال شهر سبتمبر القادم، عبر المنصة الإلكترونية لوزارة الإسكان، على أن يتم تخصيص الوحدات عن طريق القرعة العلنية الشفافة التي تشرف عليها الجهات الرقابية. وينصح المهتمون بمتابعة الحسابات الرسمية للوزارة للاطلاع على آخر المستجدات وتفاصيل التسجيل.</p>
+                
+                <!-- خاتمة المقال النهائية -->
+                <div class="border-t border-gray-200 mt-12 pt-6 text-center text-gray-500 text-sm">
+                    <p>جميع الحقوق محفوظة - شبكة عقارات الآن © 2026</p>
+                    <p class="text-xs mt-2">للتواصل مع الكاتب: f.alqahtani@aqar-now.com</p>
+                </div>
+            </div>
+            
+            <!-- أزرار المشاركة الاجتماعية أسفل المقال -->
+            <div class="flex flex-wrap justify-center gap-3 mt-10 pt-6 border-t border-gray-200">
+                <span class="font-bold text-gray-700">شارك هذا المقال:</span>
+                <a href="#" class="bg-[#1877F2] text-white px-4 py-2 rounded-lg text-sm hover:opacity-90 transition"><i class="fab fa-facebook-f ml-1"></i> فيسبوك</a>
+                <a href="#" class="bg-[#1DA1F2] text-white px-4 py-2 rounded-lg text-sm hover:opacity-90 transition"><i class="fab fa-twitter ml-1"></i> تويتر</a>
+                <a href="#" class="bg-[#25D366] text-white px-4 py-2 rounded-lg text-sm hover:opacity-90 transition"><i class="fab fa-whatsapp ml-1"></i> واتساب</a>
+                <a href="#" class="bg-[#0077B5] text-white px-4 py-2 rounded-lg text-sm hover:opacity-90 transition"><i class="fab fa-linkedin ml-1"></i> لينكدإن</a>
+                <button class="bg-gray-600 text-white px-4 py-2 rounded-lg text-sm hover:opacity-90 transition" onclick="navigator.clipboard.writeText(window.location.href)"><i class="fas fa-link ml-1"></i> نسخ الرابط</button>
+            </div>
+        </article>
+    </div>
+</main>
+  <!-- نموذج للفوتر المطور -->
+    <footer class="footer-bg text-white mt-12">
+        <!-- القسم العلوي مع الخريطة والشعار -->
+        <div class="container mx-auto px-4 md:px-6 py-12 md:py-16">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                
+                <!-- العمود الأول: الشعار والمعلومات -->
+                <div class="lg:col-span-4 text-center lg:text-right">
+                                      <div class="flex justify-center lg:justify-start mb-6">
+    <div class="bg-white  p-4 rounded-2xl inline-block border border-white/20">
+        <a href="/" class="block">
+            <img src="./assets/img/logo.webp"
+                 alt="البوابة الإخبارية"
+                 class="h-20 md:h-24 w-auto mx-auto">
+        </a>
+    </div>
+</div>
+
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        المنصة الأولى المتخصصة في رصد ومتابعة أخبار المشاريع الكبرى في المملكة العربية ، نقدم لكم أحدث الأخبار والتقارير الحصرية لحظة بلحظة.
+                    </p>
+                    <div class="flex justify-center lg:justify-start gap-3 mb-6">
+                        <span class="text-xs bg-white/10 px-3 py-1 rounded-full">✓ دقة في النقل</span>
+                        <span class="text-xs bg-white/10 px-3 py-1 rounded-full">✓ سرعة في التغطية</span>
+                        <span class="text-xs bg-white/10 px-3 py-1 rounded-full">✓ مصداقية عالية</span>
+                    </div>
+                </div>
+
+                <!-- العمود الثاني: خريطة الموقع (الأقسام الرئيسية) -->
+                <div class="lg:col-span-5">
+                    <h3 class="text-red-500 font-bold text-2xl mb-6 text-center lg:text-right relative inline-block lg:block">
+                        خريطة الموقع
+                        <div class="absolute -bottom-2 right-0 w-12 h-0.5 bg-red-500 rounded-full lg:right-auto lg:left-0"></div>
+                    </h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                        <!-- العمود الأول -->
+                        <div>
+                            <h4 class="text-white font-semibold mb-3 border-r-2 border-red-500 pr-3">الأخبار</h4>
+                            <ul class="space-y-2 text-sm">
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">أخبار عاجلة</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">أخبار اليوم</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">حوادث</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">سياسة وتقارير</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">عرب وعالم</a></li>
+                            </ul>
+                        </div>
+                        <!-- العمود الثاني -->
+                        <div>
+                            <h4 class="text-white font-semibold mb-3 border-r-2 border-red-500 pr-3">القطاعات</h4>
+                            <ul class="space-y-2 text-sm">
+                                <li><a href="../breaking-news/" class="footer-link text-gray-300 hover:text-red-400 transition">أخبار عاجلة</a></li>
+                                <li><a href="../daily-news/" class="footer-link text-gray-300 hover:text-red-400 transition"> أخبار اليوم</a></li>
+                                <li><a href="../real-estate/" class="footer-link text-gray-300 hover:text-red-400 transition"> عقارات</a></li>
+                                <li><a href="../construction/" class="footer-link text-gray-300 hover:text-red-400 transition">مقاولات وإنشاءات</a></li>
+                                <li><a href="../security-systems/" class="footer-link text-gray-300 hover:text-red-400 transition">أمن وسلامة</a></li>
+                                <li><a href="../interior-design/" class="footer-link text-gray-300 hover:text-red-400 transition">تشطيبات وديكورات</a></li>
+                                <li><a href="../sports/" class="footer-link text-gray-300 hover:text-red-400 transition"> رياضة</a></li>
+                                <li><a href="../reports-analysis/" class="footer-link text-gray-300 hover:text-red-400 transition"> تقارير</a></li>
+                            </ul>
+                        </div>
+                        <!-- العمود الثالث -->
+                        <div>
+                            <h4 class="text-white font-semibold mb-3 border-r-2 border-red-500 pr-3">منوعات</h4>
+                            <ul class="space-y-2 text-sm">
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">رياضة</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">تكنولوجيا</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">صحة ومنوعات</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">فن ومشاهير</a></li>
+                                <li><a href="#" class="footer-link text-gray-300 hover:text-red-400 transition">فيديوهات</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- العمود الثالث: التواصل والنشرة البريدية -->
+                <div class="lg:col-span-3">
+                    <h3 class="text-red-500 font-bold text-2xl mb-6 text-center lg:text-right">
+                        تواصل معنا
+                    </h3>
+                    
+                    <!-- وسائل التواصل الاجتماعي -->
+                    <div class="flex justify-center lg:justify-start gap-3 mb-8">
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/newspoortal.1/" class="social-icon w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-blue-600 transition">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/news.portal.1/" class="social-icon w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-pink-500 transition">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@news.portal.1?_r=1&_t=ZS-972bV61teVO" class="social-icon w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-black transition">
+        <i class="fab fa-tiktok"></i>
+    </a>
+
+    <!-- Twitter (X) -->
+    <a href="https://x.com/news_portal1" class="social-icon w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-sky-500 transition">
+        <i class="fab fa-x-twitter"></i>
+    </a>
+
+    <!-- Snapchat -->
+    <a href="https://www.snapchat.com/add/news_portal1?share_id=blPkDEBy5ls&locale=ar-EG" class="social-icon w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-yellow-400 transition">
+        <i class="fab fa-snapchat-ghost"></i>
+    </a>
+</div>
+
+
+                    <!-- النشرة البريدية -->
+                    <div class="bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10">
+                        <h4 class="font-bold mb-3 text-center lg:text-right">📧 النشرة الإخبارية</h4>
+                        <p class="text-xs text-gray-300 mb-3 text-center lg:text-right">اشترك ليصلك أحدث الأخبار مباشرة</p>
+                        <form class="flex flex-col gap-2">
+                            <input type="email" placeholder="بريدك الإلكتروني" class="newsletter-input bg-white/20 rounded-lg px-4 py-2 text-sm text-white placeholder:text-gray-400 border border-white/20 focus:border-red-500 transition">
+                            <button class="bg-red-500 hover:bg-red-600 transition rounded-lg px-4 py-2 text-sm font-bold">
+                                اشترك الآن
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
 
-            <!-- Sidebar -->
-            <aside class="lg:col-span-1">
-                <div class="bg-white border rounded-lg p-6 mb-8 shadow-sm">
-                    <h3 class="text-xl font-bold text-primary mb-4 border-b pb-2">الأكثر قراءة اليوم</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start space-x-reverse space-x-3">
-                            <span class="bg-gray-100 text-primary w-6 h-6 flex items-center justify-center rounded-full text-xs font-bold">1</span>
-                            <a href="#" class="text-sm font-semibold hover:text-primary transition">أسعار العقار في الرياض تصل لمستويات قياسية</a>
-                        </li>
-                        <li class="flex items-start space-x-reverse space-x-3">
-                            <span class="bg-gray-100 text-primary w-6 h-6 flex items-center justify-center rounded-full text-xs font-bold">2</span>
-                            <a href="#" class="text-sm font-semibold hover:text-primary transition">شروط الحصول على الدعم السكني الجديد 2026</a>
-                        </li>
-                    </ul>
+            <!-- روابط التطبيقات (اختياري) -->
+            <div class="mt-12 pt-8 border-t border-white/10">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div class="text-center md:text-right">
+                        <p class="text-sm text-gray-300">حمّل تطبيقنا على هاتفك</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="#" class="app-btn flex items-center gap-2 bg-white/10 hover:bg-white/20 rounded-lg px-4 py-2 transition">
+                            <i class="fab fa-google-play text-xl"></i>
+                            <span class="text-sm">Google Play</span>
+                        </a>
+                        <a href="#" class="app-btn flex items-center gap-2 bg-white/10 hover:bg-white/20 rounded-lg px-4 py-2 transition">
+                            <i class="fab fa-apple text-xl"></i>
+                            <span class="text-sm">App Store</span>
+                        </a>
+                    </div>
                 </div>
-                <div class="bg-primary text-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-bold mb-4">اشترك في القائمة البريدية</h3>
-                    <form class="space-y-4">
-                        <input type="email" placeholder="بريدك الإلكتروني" class="w-full py-2 px-4 rounded text-gray-800">
-                        <button class="w-full bg-accent py-2 rounded font-bold hover:bg-red-700 transition">اشترك الآن</button>
-                    </form>
-                </div>
-            </aside>
+            </div>
         </div>
-    </main>
 
-    <footer class="bg-gray-900 text-white pt-12 pb-6 mt-12">
-        <div class="container mx-auto px-4 text-center">
-            <p class="text-gray-400 mb-4">&copy; 2026 بوابة الاخبار . جميع الحقوق محفوظة.</p>
-            <div class="flex justify-center space-x-reverse space-x-4">
-                <a href="#" class="hover:text-primary"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-primary"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="hover:text-primary"><i class="fab fa-instagram"></i></a>
+        <!-- الشريط السفلي (حقوق النشر والروابط) -->
+        <div class="border-t border-white/10 bg-black/20">
+            <div class="container mx-auto px-4 md:px-6 py-5">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-300">
+                    <div class="text-center md:text-right order-2 md:order-1">
+                        © <span id="footer-year"></span> 
+                        بوابة الاخبار  - جميع الحقوق محفوظة
+                    </div>
+                    <div class="flex gap-4 order-1 md:order-2">
+                        <a href="#" class="hover:text-red-400 transition text-xs">الرئيسية</a>
+                        <span class="text-white/20">|</span>
+                        <a href="#" class="hover:text-red-400 transition text-xs">سياسة الخصوصية</a>
+                        <span class="text-white/20">|</span>
+                                                <a href="mailto:info@news-portal1.com" class="hover:text-red-400 transition text-xs">اتصل بنا</a>
+                        <span class="text-white/20">|</span>
+                        <a href="#" class="hover:text-red-400 transition text-xs">شروط الاستخدام</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        // تحديث السنة تلقائياً
+        document.getElementById("footer-year").textContent = new Date().getFullYear();
+        
+        // تأثيرات إضافية (اختيارية)
+        document.querySelectorAll('.footer-link').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(-5px)';
+            });
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0)';
+            });
+        });
+    </script>
+        <style>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        .footer-bg {
+            background: linear-gradient(135deg, #0B2B44 0%, #062035 100%);
+        }
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .footer-link {
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+        .footer-link:hover {
+            transform: translateX(-5px);
+            color: #E53E3E !important;
+        }
+        .newsletter-input {
+            transition: all 0.3s ease;
+        }
+        .newsletter-input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.3);
+        }
+        .app-btn {
+            transition: all 0.3s ease;
+        }
+        .app-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .border-glow {
+            border-image: linear-gradient(135deg, #E53E3E, #0B3B66) 1;
+        }
+    </style>
 
     <script src="assets/js/main.js"></script>
 </body>
