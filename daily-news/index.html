@@ -537,24 +537,16 @@
     <script>
         // -------------------- قاعدة بيانات الأخبار --------------------
         const allArticles = [
-            { id: 1, title: "أزمة 'السراج مول' تتصاعد.. اتهامات لحي شرق مدينة نصر", summary: "بالثقافات والمواطنون يستغيثون بوزيرة التنمية المحلية. شهدت منطقة مكرم عبيد أزمة حادة أثارت غضب السكان.", date: "2023-03-21", category: "محليات", image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=200&h=140&q=80", views: 15234 },
-            { id: 2, title: "تأثير المعالجة البصرية الحديثة على نسب تفاعل الجمهور الرقمي", summary: "أكدت بحوث التدخل أن طريقة إخراج الفيديوهات القصيرة تلعب الدور الحاسم في زيادة التفاعل.", date: "2023-03-20", category: "تقنية", image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=200&h=140&q=80", views: 8765 },
-            { id: 3, title: "لأول مرة في تاريخ الجامعات المصرية — دكتوراة في الجيومرفولوجيا العسكرية", summary: "حصل الباحث اللواء أركان حرب على درجة الدكتوراة بعد مناقشة استمرت لساعات.", date: "2023-03-17", category: "تعليم", image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=200&h=140&q=80", views: 4291 },
-            { id: 4, title: "إبراهيم أبودكري يدير مائدة مستديرة لمستقبل الدراما المصرية", summary: "ينظم الملتقى العربي الإفريقي للمنتجين العرب مائدة مستديرة بحضور نخبة من صناع الدراما.", date: "2023-03-02", category: "فن", image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=200&h=140&q=80", views: 3187 },
-            { id: 5, title: "السكة الحديد تقرر تشغيل قطارات إضافية بمناسبة عيد الأضحى", summary: "تشغيل 15 قطارًا إضافيًا على خطوط الصعيد والسواحل لاستيعاب أعداد المسافرين.", date: "2023-03-10", category: "خدمات", image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=200&h=140&q=80", views: 5692 },
-            { id: 6, title: "ندوة بالقاهرة: تمكين المرأة العربية بوابة للتنمية المستدامة", summary: "أكد المشاركون أن الاستثمار في تعليم المرأة يحقق عوائد تنموية تفوق التوقعات.", date: "2023-03-21", category: "اقتصاد", image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=200&h=140&q=80", views: 7431 },
-            { id: 7, title: "مصر تعلن كشفاً جديداً للغاز في الصحراء الغربية", summary: "اكتشاف جديد يقدر حجم الاحتياطي بنحو 2.5 تريليون قدم مكعب.", date: "2023-03-05", category: "طاقة", image: "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?auto=format&fit=crop&w=200&h=140&q=80", views: 9872 },
-            { id: 8, title: "بينهم صالح.. المهددون التاريخيون للعرب في كأس العالم", summary: "قائمة اللاعبين العرب المهددين بالغياب بسبب الإصابات.", date: "2023-03-05", category: "رياضة", image: "https://images.unsplash.com/photo-1459865264687-287d91b1e4d0?auto=format&fit=crop&w=200&h=140&q=80", views: 11203 },
-            { id: 9, title: "كيف تجري مصر وإسرائيل أخطر معركة مخابرات؟", summary: "تفاصيل حصرية حول التحركات الاستخباراتية الأخيرة.", date: "2023-03-05", category: "سياسة", image: "https://images.unsplash.com/photo-1583244685026-d8519b5e3e2e?auto=format&fit=crop&w=200&h=140&q=80", views: 9234 },
-            { id: 10, title: "القيمة السوقية للمنتجات العقارية تقفز 12%", summary: "تقرير اقتصادي: المشاريع الكبرى أسهمت في انتعاش السوق العقاري.", date: "2023-03-05", category: "عقارات", image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=200&h=140&q=80", views: 6731 },
-            { id: 11, title: "وزارة الشؤون البلدية تطلق منصة رقمية لمتابعة المشاريع", summary: "خطوة غير مسبوقة لزيادة الشفافية وإشراك المواطنين.", date: "2026-06-05", category: "حكومة", image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=200&h=140&q=80", views: 4521 },
-            { id: 12, title: "افتتاح مشروع 'بوابة الدرعية' التاريخي نهاية 2026", summary: "مشروع ضخم يجمع بين التراث والترفيه.", date: "2026-06-04", category: "مشاريع", image: "https://images.unsplash.com/photo-1570369838323-7192a3e4897a?auto=format&fit=crop&w=200&h=140&q=80", views: 7822 },
-            { id: 13, title: " تسجل أعلى نسبة مشاركة في قطاع المقاولات", summary: "توسع عمراني بقيادة رؤية 2030 وتعاقدات ضخمة.", date: "2026-06-03", category: "مقاولات", image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=200&h=140&q=80", views: 5912 },
-            { id: 14, title: "نظام السلامة الجديد يُلزم المنشآت بتقنيات الذكاء الاصطناعي", summary: "تعزيز معايير الأمن والسلامة في المباني.", date: "2026-06-02", category: "أمن", image: "https://images.unsplash.com/photo-1582653291997-079a1b04e6a1?auto=format&fit=crop&w=200&h=140&q=80", views: 3420 },
-            { id: 15, title: "تشطيبات فاخرة: توجه عالمي نحو الديكور المستدام", summary: "مواد صديقة للبيئة تقتحم السوق السعودي.", date: "2026-06-01", category: "ديكور", image: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=200&h=140&q=80", views: 4105 },
-            { id: 16, title: "الذكاء الاصطناعي في إدارة المشاريع: ثورة قادمة", summary: "خبراء: اعتماد تقنيات AI يقلل التكاليف بنسبة 30%", date: "2026-05-30", category: "تقنية", image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=200&h=140&q=80", views: 6530 },
-            { id: 17, title: "تحالف سعودي مصري لتنفيذ مشاريع الطاقة المتجددة", summary: "اتفاقية شراكة لإنشاء محطات شمسية عملاقة.", date: "2026-05-28", category: "طاقة", image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=200&h=140&q=80", views: 5210 },
-            { id: 18, title: "إطلاق أكبر مسابقة للعمارة الخضراء", summary: "تهدف لتشجيع التصاميم المستدامة.", date: "2026-05-25", category: "عمارة", image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=200&h=140&q=80", views: 3789 }
+{
+  id: 1,
+  title: "نتيجة الشهادة الإعدادية 2026 تظهر في جميع محافظات مصر برقم الجلوس",
+  summary: "تترقب آلاف الأسر المصرية إعلان نتيجة الشهادة الإعدادية 2026 في مختلف المحافظات، حيث يتم اعتماد النتائج رسميًا من مديريات التربية والتعليم ورفعها عبر المواقع الإلكترونية للاستعلام برقم الجلوس. وتشهد النتائج متابعة كبيرة من الطلاب وأولياء الأمور لمعرفة الدرجات والتقديرات النهائية في جميع المواد.",
+  date: "2026-06-20",
+  category: "تعليم",
+  image: "../assets/img/preparatory-certificate-results.webp",
+  views: 28450,
+  link:"./preparatory-certificate-results/"
+}
         ];
 
         let currentPageNum = 1;
@@ -587,7 +579,7 @@
                             <p class="text-gray-500 text-sm line-clamp-2">${article.summary.substring(0, 100)}...</p>
                             <div class="flex items-center gap-3 mt-2 text-xs text-gray-400">
                                 <span><i class="far fa-eye ml-1"></i> ${article.views.toLocaleString()}</span>
-                                <a href="article.html?id=${article.id}" class="text-primary font-semibold text-xs">اقرأ المزيد <i class="fas fa-arrow-left mr-1"></i></a>
+                                <a href="${article.link}" class="text-primary font-semibold text-xs">اقرأ المزيد <i class="fas fa-arrow-left mr-1"></i></a>
                             </div>
                         </div>
                     </div>
