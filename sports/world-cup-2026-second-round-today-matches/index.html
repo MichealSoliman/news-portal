@@ -164,6 +164,30 @@
         </ul>
     </div>
 </div>
+<style>
+#mobile-nav-menu{
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+#mobile-nav-menu.active{
+    max-height: 600px;
+    opacity: 1;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.getElementById("mobile-menu-toggle");
+    const menu = document.getElementById("mobile-nav-menu");
+
+    toggleBtn.addEventListener("click", function () {
+        menu.classList.toggle("active");
+    });
+});
+</script>
 <main class="container mx-auto px-4 sm:px-6 py-8">
     <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
         
