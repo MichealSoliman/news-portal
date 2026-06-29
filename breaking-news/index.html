@@ -258,8 +258,59 @@
                 <li><a href="../construction/" class="hover:text-amber-200 transition">مقاولات</a></li>
                 <li><a href="../security-systems/" class="hover:text-amber-200 transition">أمن وسلامة</a></li>
                 <li><a href="../interior-design/" class="hover:text-amber-200 transition">تشطيبات</a></li>
-                <li><a href="../reports-analysis/" class="hover:text-amber-200 transition">تقارير</a></li>
-               
+                                <!-- زر المزيد -->
+<div class="relative inline-block text-left">
+    <button id="moreBtn"
+        class="px-4 py-2 bg-amber-500 text-white rounded-lg hover:bg-amber-600 transition flex items-center gap-2">
+        المزيد
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 9l-7 7-7-7"></path>
+        </svg>
+    </button>
+
+    <!-- القائمة -->
+    <ul id="moreMenu"
+        class="hidden absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-lg border overflow-hidden z-50">
+
+        <li>
+            <a href="../companies/"
+                class="block px-4 py-3 hover:bg-amber-100 transition text-gray-700">
+               شركات    
+            </a>
+        </li>
+
+        <li>
+            <a href="#"
+                class="block px-4 py-3 hover:bg-amber-100 transition text-gray-700">
+                تحليل البيانات
+            </a>
+        </li>
+
+        <li>
+            <a href="#"
+                class="block px-4 py-3 hover:bg-amber-100 transition text-gray-700">
+                إحصائيات
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- JS -->
+<script>
+    const btn = document.getElementById('moreBtn');
+    const menu = document.getElementById('moreMenu');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+
+    // إغلاق عند الضغط خارج القائمة
+    document.addEventListener('click', (e) => {
+        if (!btn.contains(e.target) && !menu.contains(e.target)) {
+            menu.classList.add('hidden');
+        }
+    });
+</script>               
             </ul>
         </div>
     </nav>
